@@ -15,7 +15,7 @@ export default {
       colors: {
         primary: "#EA2027",
         secondary: "#475569",
-        ghost: "#fafcff",
+        ghost: "#f1f5f9",
       },
       keyframes: {
         "accordion-down": {

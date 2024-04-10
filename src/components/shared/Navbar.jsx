@@ -59,14 +59,14 @@ const Navbar = () => {
             <FaSortDown />
           </div>
 
-          <div className="flex items-center gap-10 capitalize text-white">
+          <div className="flex items-center lg:gap-10 gap-4 capitalize text-white">
             {navItems.map((nav, index) => (
-              <NavLink key={index} to={nav?.url} className="nav-item">
+              <NavLink key={index} to={nav?.url} className="nav-item max-md:hidden">
                 {nav?.item}
               </NavLink>
             ))}
-            <div className="flex items-center gap-2">
-              <BsTelephone className="w-[22px] h-[22px] hover:text-slate-300" />
+            <div className="flex items-center lg:gap-2 gap-1">
+              <BsTelephone className="lg:w-[22px] lg:h-[22px] hover:text-slate-300" />
               <div>
                 Hotline:<span className="nav-item ml-2">+880 1800 6000</span>
               </div>

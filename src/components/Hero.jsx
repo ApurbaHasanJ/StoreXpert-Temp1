@@ -28,7 +28,7 @@ const heros = [
 
 const Hero = () => {
   return (
-    <div className="max-h-[468.5px] my-6 flex gap-5">
+    <div className="max-h-[468.5px] flex gap-5">
       <div className="max-lg:hidden">
         <Categories />
       </div>

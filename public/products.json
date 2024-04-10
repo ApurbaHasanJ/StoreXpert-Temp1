@@ -1,0 +1,814 @@
+[
+  {
+    "_id": 1,
+    "title": "Ladies Hand Bag - Original leather",
+    "price": 290,
+    "disc": 20,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761359/Products/bags/bag8_mi0ni8.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761355/Products/bags/bag7_gr4tl1.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761352/Products/bags/bag6_ud0hd2.jpg"
+    ],
+    "inStock": true,
+    "category": "women",
+    "sub_category": "bags",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 2,
+    "title": "Ladies Hand Bag - Original leather",
+    "price": 390,
+    "disc": null,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761355/Products/bags/bag7_gr4tl1.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761352/Products/bags/bag6_ud0hd2.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761350/Products/bags/bag5_lakgk5.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760252/Products/bags/bag3_chj6yu.jpg"
+    ],
+    "inStock": false,
+    "category": "women",
+    "sub_category": "bags",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 3,
+    "title": "Original Leather Moneybag for man Original Leather Moneybag for man Original Leather Moneybag for man",
+    "price": 490,
+    "disc": null,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760779/Products/wallets/wallet9_ih3gy1.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760776/Products/wallets/wallet8_v5wwwt.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "wallets",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 4,
+    "title": "premium sunglass original frame",
+    "price": 590,
+    "disc": 35,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg"
+    ],
+    "inStock": false,
+    "category": "men",
+    "sub_category": "glasses",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 5,
+    "title": "Men original fabric t-shirt",
+    "price": 690,
+    "disc": 20,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760410/Products/t-shirts/t-shirt6_a9idry.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760408/Products/t-shirts/t-shirt5_jnguyh.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "t-shirts",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 6,
+    "title": "Men best Quality Shoe",
+    "price": 790,
+    "disc": 10,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760374/Products/shoes/shoe9_gxdwzh.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760378/Products/shoes/shoe11_xzrkuh.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "shoes",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 7,
+    "title": "Men Premium watch",
+    "price": 890,
+    "disc": null,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760458/Products/watches/watch11_eudnxe.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "watches",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 8,
+    "title": "Men best Quality Shoe",
+    "price": 990,
+    "disc": 10,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760358/Products/shoes/shoe2_sndcco.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760364/Products/shoes/shoe4_vyo4pn.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760357/Products/shoes/shoe1_azmaau.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760362/Products/shoes/shoe3_a83eke.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760364/Products/shoes/shoe4_vyo4pn.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760371/Products/shoes/shoe7_jsslbr.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760368/Products/shoes/shoe6_gqhm4h.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "shoes",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 9,
+    "title": "Men original fabric t-shirt",
+    "price": 1090,
+    "disc": 40,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760408/Products/t-shirts/t-shirt5_jnguyh.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760407/Products/t-shirts/t-shirt3_gokebj.jpg"
+    ],
+    "inStock": false,
+    "category": "men",
+    "sub_category": "t-shirts",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 10,
+    "title": "Men Premium watch",
+    "price": 1190,
+    "disc": 20,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "wallets",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 11,
+    "title": "Ladies Hand Bag - Original leather",
+    "price": 390,
+    "disc": 10,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760250/Products/bags/bag2_ywfk5a.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761352/Products/bags/bag6_ud0hd2.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761350/Products/bags/bag5_lakgk5.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760252/Products/bags/bag3_chj6yu.jpg"
+    ],
+    "inStock": false,
+    "category": "women",
+    "sub_category": "bags",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 12,
+    "title": "Girls School Bag - Original leather",
+    "price": 390,
+    "disc": 10,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760251/Products/bags/bag1_f3scm2.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760250/Products/bags/bag2_ywfk5a.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761352/Products/bags/bag6_ud0hd2.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761350/Products/bags/bag5_lakgk5.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760252/Products/bags/bag3_chj6yu.jpg"
+    ],
+    "inStock": false,
+    "category": "women",
+    "sub_category": "bags",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 13,
+    "title": "Girls School Bag - Original leather",
+    "price": 390,
+    "disc": 10,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761350/Products/bags/bag5_lakgk5.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760250/Products/bags/bag2_ywfk5a.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761352/Products/bags/bag6_ud0hd2.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761350/Products/bags/bag5_lakgk5.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760252/Products/bags/bag3_chj6yu.jpg"
+    ],
+    "inStock": false,
+    "category": "women",
+    "sub_category": "bags",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 14,
+    "title": "premium sunglass original frame",
+    "price": 590,
+    "disc": 35,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761728/Products/glasses/sunglass7_vp3rkn.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg"
+    ],
+    "inStock": false,
+    "category": "men",
+    "sub_category": "glasses",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 15,
+    "title": "premium sunglass original frame",
+    "price": 590,
+    "disc": 35,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761617/Products/glasses/sunglass5_x64nbj.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761728/Products/glasses/sunglass7_vp3rkn.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg"
+    ],
+    "inStock": false,
+    "category": "men",
+    "sub_category": "glasses",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 16,
+    "title": "premium sunglass original frame",
+    "price": 590,
+    "disc": null,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761613/Products/glasses/sunglass4_eaka1o.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761728/Products/glasses/sunglass7_vp3rkn.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg"
+    ],
+    "inStock": false,
+    "category": "men",
+    "sub_category": "glasses",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 17,
+    "title": "premium sunglass original frame",
+    "price": 590,
+    "disc": 35,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760315/Products/glasses/sunglass1_e9vubi.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761613/Products/glasses/sunglass4_eaka1o.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761728/Products/glasses/sunglass7_vp3rkn.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg"
+    ],
+    "inStock": false,
+    "category": "men",
+    "sub_category": "glasses",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 18,
+    "title": "premium sunglass original frame",
+    "price": 590,
+    "disc": 35,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761608/Products/glasses/sunglass3_mdfvv3.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760315/Products/glasses/sunglass1_e9vubi.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761613/Products/glasses/sunglass4_eaka1o.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761728/Products/glasses/sunglass7_vp3rkn.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg"
+    ],
+    "inStock": false,
+    "category": "men",
+    "sub_category": "glasses",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 19,
+    "title": "premium sunglass original frame",
+    "price": 590,
+    "disc": 35,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760316/Products/glasses/sunglass2_ql43kb.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761613/Products/glasses/sunglass4_eaka1o.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760316/Products/glasses/sunglass2_ql43kb.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761613/Products/glasses/sunglass4_eaka1o.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761728/Products/glasses/sunglass7_vp3rkn.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg"
+    ],
+    "inStock": false,
+    "category": "men",
+    "sub_category": "glasses",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 20,
+    "title": "premium sunglass original frame",
+    "price": 590,
+    "disc": 35,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760316/Products/glasses/sunglass2_ql43kb.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761613/Products/glasses/sunglass4_eaka1o.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760316/Products/glasses/sunglass2_ql43kb.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761613/Products/glasses/sunglass4_eaka1o.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761728/Products/glasses/sunglass7_vp3rkn.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg"
+    ],
+    "inStock": false,
+    "category": "men",
+    "sub_category": "glasses",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 21,
+    "title": "Original Leather Moneybag for man",
+    "price": 490,
+    "disc": 15,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760768/Products/wallets/wallet5_usnt5n.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760779/Products/wallets/wallet9_ih3gy1.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760776/Products/wallets/wallet8_v5wwwt.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "wallets",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 22,
+    "title": "Original Leather Moneybag for man",
+    "price": 490,
+    "disc": 15,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760773/Products/wallets/wallet7_wtz03t.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760776/Products/wallets/wallet8_v5wwwt.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760779/Products/wallets/wallet9_ih3gy1.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760776/Products/wallets/wallet8_v5wwwt.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "wallets",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 23,
+    "title": "Original Leather Moneybag for man",
+    "price": 490,
+    "disc": null,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760758/Products/wallets/wallet10_orclgw.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760773/Products/wallets/wallet7_wtz03t.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760776/Products/wallets/wallet8_v5wwwt.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760779/Products/wallets/wallet9_ih3gy1.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760776/Products/wallets/wallet8_v5wwwt.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "wallets",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 24,
+    "title": "Original Leather Moneybag for man",
+    "price": 490,
+    "disc": 15,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760751/Products/wallets/wallet2_yl5vdj.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760773/Products/wallets/wallet7_wtz03t.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760776/Products/wallets/wallet8_v5wwwt.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760779/Products/wallets/wallet9_ih3gy1.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760776/Products/wallets/wallet8_v5wwwt.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "wallets",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 25,
+    "title": "Original Leather Moneybag for man",
+    "price": 490,
+    "disc": 15,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760753/Products/wallets/wallet3_pfz1y7.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760751/Products/wallets/wallet2_yl5vdj.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760773/Products/wallets/wallet7_wtz03t.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760776/Products/wallets/wallet8_v5wwwt.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760779/Products/wallets/wallet9_ih3gy1.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760776/Products/wallets/wallet8_v5wwwt.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "wallets",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 26,
+    "title": "Premium quality shoe for man",
+    "price": 490,
+    "disc": 15,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760377/Products/shoes/shoe10_wcvxnx.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760368/Products/shoes/shoe6_gqhm4h.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "shoes",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 27,
+    "title": "Premium quality shoe for man",
+    "price": 490,
+    "disc": 15,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760371/Products/shoes/shoe7_jsslbr.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760368/Products/shoes/shoe6_gqhm4h.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "shoes",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 28,
+    "title": "Premium quality shoe for man",
+    "price": 490,
+    "disc": 15,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760368/Products/shoes/shoe6_gqhm4h.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760371/Products/shoes/shoe7_jsslbr.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760368/Products/shoes/shoe6_gqhm4h.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "shoes",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 29,
+    "title": "Premium quality shoe for man",
+    "price": 490,
+    "disc": null,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760362/Products/shoes/shoe3_a83eke.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760364/Products/shoes/shoe4_vyo4pn.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760371/Products/shoes/shoe7_jsslbr.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760368/Products/shoes/shoe6_gqhm4h.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "shoes",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 30,
+    "title": "Premium quality shoe for man",
+    "price": 490,
+    "disc": 15,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760357/Products/shoes/shoe1_azmaau.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760362/Products/shoes/shoe3_a83eke.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760364/Products/shoes/shoe4_vyo4pn.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760371/Products/shoes/shoe7_jsslbr.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760368/Products/shoes/shoe6_gqhm4h.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "shoes",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 31,
+    "title": "Premium quality shoe for man",
+    "price": 490,
+    "disc": 15,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760364/Products/shoes/shoe4_vyo4pn.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760357/Products/shoes/shoe1_azmaau.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760362/Products/shoes/shoe3_a83eke.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760364/Products/shoes/shoe4_vyo4pn.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760371/Products/shoes/shoe7_jsslbr.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760368/Products/shoes/shoe6_gqhm4h.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "shoes",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 32,
+    "title": "Premium quality shoe for man",
+    "price": 490,
+    "disc": 15,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760364/Products/shoes/shoe4_vyo4pn.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760357/Products/shoes/shoe1_azmaau.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760362/Products/shoes/shoe3_a83eke.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760364/Products/shoes/shoe4_vyo4pn.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760371/Products/shoes/shoe7_jsslbr.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760368/Products/shoes/shoe6_gqhm4h.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "shoes",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 33,
+    "title": "Men original fabric t-shirt",
+    "price": 1090,
+    "disc": 40,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760407/Products/t-shirts/t-shirt3_gokebj.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760408/Products/t-shirts/t-shirt5_jnguyh.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760407/Products/t-shirts/t-shirt3_gokebj.jpg"
+    ],
+    "inStock": false,
+    "category": "men",
+    "sub_category": "t-shirts",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 34,
+    "title": "Men original fabric t-shirt",
+    "price": 1090,
+    "disc": 40,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760406/Products/t-shirts/t-shirt4_ybhkyv.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760407/Products/t-shirts/t-shirt3_gokebj.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760408/Products/t-shirts/t-shirt5_jnguyh.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760407/Products/t-shirts/t-shirt3_gokebj.jpg"
+    ],
+    "inStock": false,
+    "category": "men",
+    "sub_category": "t-shirts",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 35,
+    "title": "Men original fabric t-shirt",
+    "price": 1090,
+    "disc": 40,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760402/Products/t-shirts/t-shirt2_vdaibb.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760406/Products/t-shirts/t-shirt4_ybhkyv.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760407/Products/t-shirts/t-shirt3_gokebj.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760408/Products/t-shirts/t-shirt5_jnguyh.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760407/Products/t-shirts/t-shirt3_gokebj.jpg"
+    ],
+    "inStock": false,
+    "category": "men",
+    "sub_category": "t-shirts",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 36,
+    "title": "Men original fabric t-shirt",
+    "price": 1090,
+    "disc": 40,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760400/Products/t-shirts/t-shirt1_xmnzxy.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760402/Products/t-shirts/t-shirt2_vdaibb.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760406/Products/t-shirts/t-shirt4_ybhkyv.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760407/Products/t-shirts/t-shirt3_gokebj.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760408/Products/t-shirts/t-shirt5_jnguyh.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760407/Products/t-shirts/t-shirt3_gokebj.jpg"
+    ],
+    "inStock": false,
+    "category": "men",
+    "sub_category": "t-shirts",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 37,
+    "title": "Men Premium watch",
+    "price": 1190,
+    "disc": 20,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760447/Products/watches/watch7_b55aab.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760450/Products/watches/watch8_haiqr7.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "wallets",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 38,
+    "title": "Men Premium watch",
+    "price": 1190,
+    "disc": 20,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760443/Products/watches/watch5_q2xren.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760450/Products/watches/watch8_haiqr7.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "wallets",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 39,
+    "title": "Men Premium watch",
+    "price": 1190,
+    "disc": 20,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760450/Products/watches/watch8_haiqr7.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760440/Products/watches/watch4_kkyu0c.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760450/Products/watches/watch8_haiqr7.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "wallets",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 40,
+    "title": "Men Premium watch",
+    "price": 1190,
+    "disc": 20,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760440/Products/watches/watch4_kkyu0c.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760450/Products/watches/watch8_haiqr7.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "wallets",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 41,
+    "title": "Men Premium watch",
+    "price": 1190,
+    "disc": 20,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760436/Products/watches/watch2_fztjho.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760440/Products/watches/watch4_kkyu0c.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760450/Products/watches/watch8_haiqr7.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "wallets",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 42,
+    "title": "Men Premium watch",
+    "price": 1190,
+    "disc": 20,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760435/Products/watches/watch1_equgnd.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760440/Products/watches/watch4_kkyu0c.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760450/Products/watches/watch8_haiqr7.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "wallets",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 43,
+    "title": "Men Premium watch",
+    "price": 1190,
+    "disc": 20,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760450/Products/watches/watch8_haiqr7.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760440/Products/watches/watch4_kkyu0c.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760450/Products/watches/watch8_haiqr7.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "wallets",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "_id": 44,
+    "title": "Men Premium watch",
+    "price": 1190,
+    "disc": 20,
+    "images": [
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760450/Products/watches/watch8_haiqr7.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760440/Products/watches/watch4_kkyu0c.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760450/Products/watches/watch8_haiqr7.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
+      "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
+    ],
+    "inStock": true,
+    "category": "men",
+    "sub_category": "wallets",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  }
+]
