@@ -67,7 +67,7 @@ const Navbar = () => {
             ))}
             <div className="flex items-center gap-2">
               <BsTelephone className="w-[22px] h-[22px] hover:text-slate-300" />
-              <div >
+              <div>
                 Hotline:<span className="nav-item ml-2">+880 1800 6000</span>
               </div>
             </div>

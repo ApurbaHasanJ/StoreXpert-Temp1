@@ -1,12 +1,15 @@
-import Hero from "@/components/Hero"
-
+import Hero from "@/components/Hero";
+import WhyUs from "@/components/WhyUs";
 
 const Home = () => {
   return (
-    <div className="bg-ghost my-6">
-      <Hero/>
+    <div className="bg-ghost">
+      <div className="container">
+        <Hero />
+        <WhyUs />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

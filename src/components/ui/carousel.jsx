@@ -1,6 +1,5 @@
 import * as React from "react"
 import useEmblaCarousel from "embla-carousel-react";
-import { ArrowLeft, ArrowRight } from "lucide-react"
 import { FaChevronLeft,FaAngleRight } from "react-icons/fa6";
 
 import { cn } from "@/lib/utils"
