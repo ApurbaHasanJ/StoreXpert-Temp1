@@ -1,5 +1,7 @@
 import FlashSale from "@/components/FlashSale";
 import Hero from "@/components/Hero";
+import HotProduct from "@/components/HotProduct";
+import NewArrivals from "@/components/NewArrivals";
 import WhyUs from "@/components/WhyUs";
 
 const Home = () => {
@@ -9,6 +11,8 @@ const Home = () => {
         <Hero />
         <WhyUs />
         <FlashSale/>
+        <HotProduct/>
+        <NewArrivals/>
       </div>
     </div>
   );

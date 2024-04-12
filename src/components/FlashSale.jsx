@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
-import ProductCard from "./shared/ProductCard";
+import ProductCards from "./shared/ProductCards";
 
 const FlashSale = () => {
   const [products, setProducts] = useState([]);
@@ -32,7 +32,7 @@ const FlashSale = () => {
           View All
         </Button>
       </div>
-      <ProductCard products={products.slice(0,5)} />
+      <ProductCards products={products.slice(0,5)} />
     </section>
   );
 };

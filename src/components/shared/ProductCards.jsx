@@ -2,7 +2,7 @@ import { FaCartPlus } from "react-icons/fa6";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 
-const ProductCard = ({ products }) => {
+const ProductCards = ({ products }) => {
   return (
     <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 md:gap-5 gap-3 gap-y-8">
       {products?.map((product) => (
@@ -27,7 +27,7 @@ const ProductCard = ({ products }) => {
           </p>
           <div className="flex items-center gap-3 mb-3">
             <span className="text-primary font-bold md:text-2xl text-lg">
-              Tk.{" "}
+            ৳{" "}
               {product?.disc
                 ? Math.floor(((100 - product?.disc) / 100) * product?.price)
                 : product?.price}
@@ -51,4 +51,4 @@ const ProductCard = ({ products }) => {
   );
 };
 
-export default ProductCard;
+export default ProductCards;
