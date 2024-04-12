@@ -1,4 +1,4 @@
-import discImg1 from "/src/assets/others/disc-hero.jpg";
+// import discImg1 from "/src/assets/others/disc-hero.jpg";
 import discImg2 from "/src/assets/others/disc-hero1.jpg";
 import discImg3 from "/src/assets/others/disc-hero2.jpg";
 

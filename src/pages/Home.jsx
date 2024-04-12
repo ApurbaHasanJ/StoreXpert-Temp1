@@ -1,4 +1,5 @@
 import AdvertiseCards from "@/components/AdvertiseCards";
+import AllProducts from "@/components/AllProducts";
 import FlashSale from "@/components/FlashSale";
 import Hero from "@/components/Hero";
 import HotProduct from "@/components/HotProduct";
@@ -15,6 +16,7 @@ const Home = () => {
         <HotProduct/>
         <NewArrivals/>
         <AdvertiseCards/>
+        <AllProducts/>
       </div>
     </div>
   );
