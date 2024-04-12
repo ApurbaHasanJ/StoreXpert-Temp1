@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { FaCartPlus } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
 import { Progress } from "./ui/progress";
+import fireImg from "/src/assets/icons/fire.png";
 
 const HotProduct = () => {
   const [product, setProduct] = useState();
@@ -19,13 +20,14 @@ const HotProduct = () => {
   return (
     <section className="bg-white border border-primary/50 my-5 rounded-lg shadow p-4">
       <div className="border-b pb-4 mb-6">
-        <h4>
-          <span className="text-primary">HOT </span>Product Of This Week
+        <h4 className="flex items-center gap-[10px]">
+          <span className="text-primary">HOT </span>Product Of This Week{" "}
+          <img className="md:w-7 w-6" src={fireImg} alt="" />
         </h4>
       </div>
       {/* card content */}
       <div className="pb-4 flex max-md:flex-col md:items-center gap-3">
-        <div className="max-w-xs relative w-full overflow-hidden rounded-xl">
+        <div className="max-w-xs border relative w-full overflow-hidden rounded-xl">
           <img
             className="scale-100 hover:scale-105 duration-300"
             src={product?.images[0]}
@@ -63,9 +65,9 @@ const HotProduct = () => {
               In Stock
             </p>
           </div>
-         
-            <Progress value={33} />
-         
+
+          <Progress value={33} />
+
           <div className="flex max-md:flex-col md:items-center gap-4 my-4">
             <div className="flex items-center gap-1 text-lg font-semibold">
               <span className="bg-ghost p-1 px-2">12</span>:

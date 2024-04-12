@@ -1,3 +1,4 @@
+import AdvertiseCards from "@/components/AdvertiseCards";
 import FlashSale from "@/components/FlashSale";
 import Hero from "@/components/Hero";
 import HotProduct from "@/components/HotProduct";
@@ -13,6 +14,7 @@ const Home = () => {
         <FlashSale/>
         <HotProduct/>
         <NewArrivals/>
+        <AdvertiseCards/>
       </div>
     </div>
   );
