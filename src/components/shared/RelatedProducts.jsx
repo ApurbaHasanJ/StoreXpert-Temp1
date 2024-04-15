@@ -1,36 +1,40 @@
 import { useEffect, useMemo, useState } from "react";
-import ProductCards from "./shared/ProductCards";
-import { Button } from "./ui/button";
+import ProductCards from "./ProductCards";
+import { Button } from "../ui/button";
 
-const NewArrivals = () => {
+const RelatedProducts = ({ category }) => {
   const [products, setProducts] = useState([]);
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    fetch("products.json")
+    fetch("/products.json")
       .then((res) => res.json())
       .then((data) => {
         // console.log({data});
-        setProducts(data);
+        const filteredProduct = data.filter(
+          (product) => product.category == category
+        );
+        setProducts(filteredProduct);
       });
-  }, []);
+  }, [category]);
 
   // Memoize the sliced array of products based on the showAll state
   const displayedProducts = useMemo(() => {
-    return showAll ? products.slice(0, 15) : products.slice(0, 5); // Show 15 products when showAll is true
-  }, [products, showAll]);
+    return showAll ? products : products.slice(0, 5);
+  }, [showAll, products]);
 
-  // console.log({products})
+  console.log(showAll);
+  console.log(displayedProducts);
 
   return (
-    <section className="bg-white rounded-lg shadow p-4">
+    <section className="bg-ghost/50 rounded-lg shadow mt-10 p-4">
       <div className="flex items-center justify-between border-b pb-4 mb-6">
         <h4>
-          New <span className="text-primary">Arrivals</span>
+          Related <span className="text-primary">Products</span>
         </h4>
 
         <Button
-          disabled={showAll}
+          disabled={products.length == 5 || showAll}
           onClick={() => setShowAll(!showAll)}
           variant="outline"
           size="sm"
@@ -43,4 +47,4 @@ const NewArrivals = () => {
   );
 };
 
-export default NewArrivals;
+export default RelatedProducts;

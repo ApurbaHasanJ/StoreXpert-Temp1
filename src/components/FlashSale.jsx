@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Button } from "./ui/button";
 import ProductCards from "./shared/ProductCards";
 
@@ -9,10 +9,15 @@ const FlashSale = () => {
     fetch("products.json")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log({data});
         setProducts(data);
       });
   }, []);
+
+  // console.log({products})
+
+   // Memoize the products array to prevent unnecessary re-renders
+   const memoizedProducts = useMemo(() => products.slice(0, 5), [products]);
 
   return (
     <section className="bg-white rounded-lg shadow p-4">
@@ -32,7 +37,7 @@ const FlashSale = () => {
           View All
         </Button>
       </div>
-      <ProductCards products={products.slice(0,5)} />
+      <ProductCards products={memoizedProducts} />
     </section>
   );
 };
