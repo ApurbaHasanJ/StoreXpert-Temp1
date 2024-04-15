@@ -12,7 +12,7 @@ const HotProduct = () => {
     fetch("products.json")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setProduct(data[0]);
       });
   }, []);
@@ -27,7 +27,7 @@ const HotProduct = () => {
       </div>
       {/* card content */}
       <div className="pb-4 flex max-md:flex-col md:items-center gap-3">
-        <div className="max-w-xs border relative w-full overflow-hidden rounded-xl">
+        <div className="max-w-xs aspect-square bg-ghost border relative w-full overflow-hidden rounded-xl">
           <img
             className="scale-100 hover:scale-105 duration-300"
             src={product?.images[0]}
@@ -58,15 +58,12 @@ const HotProduct = () => {
           </p>
           <div className="flex items-center gap-4 my-4">
             <p className="text-secondary">4.5 Litre</p>
-            <p
-              className={`text-green-500 ${
-                product?.inStock ? "block" : "hidden"
-              }`}>
-              In Stock
+            <p className={product?.inStock ? "text-green-500" : "text-red-500"}>
+              {product?.inStock ? "In Stock" : "Sold Out"}
             </p>
           </div>
 
-          <Progress value={33} />
+          <Progress value={product?.inStock} />
 
           <div className="flex max-md:flex-col md:items-center gap-4 my-4">
             <div className="flex items-center gap-1 text-lg font-semibold">

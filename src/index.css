@@ -36,7 +36,6 @@
 }
 
 /* scroll bar */
-
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -47,8 +46,8 @@
 
 /* Style the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background-color: #6c63ff;
-  border-radius: 3.5px; /* Half of the width to make it rounded */
+  background-color: gray;
+  border-radius: 3.5px; 
 }
 
 /* Add a pseudo-element for the rounded corners of the thumb */

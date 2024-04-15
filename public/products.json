@@ -9,7 +9,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761355/Products/bags/bag7_gr4tl1.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761352/Products/bags/bag6_ud0hd2.jpg"
     ],
-    "inStock": true,
+    "inStock": 40,
     "category": "women",
     "sub_category": "bags",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -27,7 +27,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761350/Products/bags/bag5_lakgk5.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760252/Products/bags/bag3_chj6yu.jpg"
     ],
-    "inStock": false,
+    "inStock": 20,
     "category": "women",
     "sub_category": "bags",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -43,7 +43,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760779/Products/wallets/wallet9_ih3gy1.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760776/Products/wallets/wallet8_v5wwwt.jpg"
     ],
-    "inStock": true,
+    "inStock": 20,
     "category": "men",
     "sub_category": "wallets",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -59,10 +59,10 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg"
     ],
-    "inStock": false,
+    "inStock": 20,
     "category": "men",
     "sub_category": "glasses",
-    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "deliveryInformation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "returnRefundPolicy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
@@ -75,7 +75,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760410/Products/t-shirts/t-shirt6_a9idry.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760408/Products/t-shirts/t-shirt5_jnguyh.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "t-shirts",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -91,7 +91,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760374/Products/shoes/shoe9_gxdwzh.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760378/Products/shoes/shoe11_xzrkuh.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "shoes",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -107,7 +107,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760458/Products/watches/watch11_eudnxe.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "watches",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -130,7 +130,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760368/Products/shoes/shoe6_gqhm4h.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "shoes",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -146,7 +146,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760408/Products/t-shirts/t-shirt5_jnguyh.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760407/Products/t-shirts/t-shirt3_gokebj.jpg"
     ],
-    "inStock": false,
+    "inStock": 20,
     "category": "men",
     "sub_category": "t-shirts",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -162,7 +162,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "wallets",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -180,7 +180,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761350/Products/bags/bag5_lakgk5.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760252/Products/bags/bag3_chj6yu.jpg"
     ],
-    "inStock": false,
+    "inStock": 20,
     "category": "women",
     "sub_category": "bags",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -199,7 +199,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761350/Products/bags/bag5_lakgk5.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760252/Products/bags/bag3_chj6yu.jpg"
     ],
-    "inStock": false,
+    "inStock": 20,
     "category": "women",
     "sub_category": "bags",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -218,7 +218,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761350/Products/bags/bag5_lakgk5.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760252/Products/bags/bag3_chj6yu.jpg"
     ],
-    "inStock": false,
+    "inStock": 20,
     "category": "women",
     "sub_category": "bags",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -235,7 +235,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg"
     ],
-    "inStock": false,
+    "inStock": 20,
     "category": "men",
     "sub_category": "glasses",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -253,7 +253,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg"
     ],
-    "inStock": false,
+    "inStock": 20,
     "category": "men",
     "sub_category": "glasses",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -271,7 +271,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg"
     ],
-    "inStock": false,
+    "inStock": 20,
     "category": "men",
     "sub_category": "glasses",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -290,7 +290,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg"
     ],
-    "inStock": false,
+    "inStock": 20,
     "category": "men",
     "sub_category": "glasses",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -310,7 +310,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg"
     ],
-    "inStock": false,
+    "inStock": 20,
     "category": "men",
     "sub_category": "glasses",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -331,7 +331,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg"
     ],
-    "inStock": false,
+    "inStock": 20,
     "category": "men",
     "sub_category": "glasses",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -353,7 +353,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg"
     ],
-    "inStock": false,
+    "inStock": 20,
     "category": "men",
     "sub_category": "glasses",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -370,7 +370,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760779/Products/wallets/wallet9_ih3gy1.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760776/Products/wallets/wallet8_v5wwwt.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "wallets",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -388,7 +388,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760779/Products/wallets/wallet9_ih3gy1.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760776/Products/wallets/wallet8_v5wwwt.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "wallets",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -407,7 +407,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760779/Products/wallets/wallet9_ih3gy1.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760776/Products/wallets/wallet8_v5wwwt.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "wallets",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -426,7 +426,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760779/Products/wallets/wallet9_ih3gy1.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760776/Products/wallets/wallet8_v5wwwt.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "wallets",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -446,7 +446,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760779/Products/wallets/wallet9_ih3gy1.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760776/Products/wallets/wallet8_v5wwwt.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "wallets",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -463,7 +463,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760368/Products/shoes/shoe6_gqhm4h.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "shoes",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -480,7 +480,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760368/Products/shoes/shoe6_gqhm4h.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "shoes",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -498,7 +498,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760368/Products/shoes/shoe6_gqhm4h.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "shoes",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -517,7 +517,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760368/Products/shoes/shoe6_gqhm4h.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "shoes",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -537,7 +537,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760368/Products/shoes/shoe6_gqhm4h.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "shoes",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -558,7 +558,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760368/Products/shoes/shoe6_gqhm4h.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "shoes",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -580,7 +580,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760368/Products/shoes/shoe6_gqhm4h.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "shoes",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -597,7 +597,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760408/Products/t-shirts/t-shirt5_jnguyh.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760407/Products/t-shirts/t-shirt3_gokebj.jpg"
     ],
-    "inStock": false,
+    "inStock": 20,
     "category": "men",
     "sub_category": "t-shirts",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -615,7 +615,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760408/Products/t-shirts/t-shirt5_jnguyh.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760407/Products/t-shirts/t-shirt3_gokebj.jpg"
     ],
-    "inStock": false,
+    "inStock": 20,
     "category": "men",
     "sub_category": "t-shirts",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -634,7 +634,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760408/Products/t-shirts/t-shirt5_jnguyh.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760407/Products/t-shirts/t-shirt3_gokebj.jpg"
     ],
-    "inStock": false,
+    "inStock": 20,
     "category": "men",
     "sub_category": "t-shirts",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -654,7 +654,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760408/Products/t-shirts/t-shirt5_jnguyh.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760407/Products/t-shirts/t-shirt3_gokebj.jpg"
     ],
-    "inStock": false,
+    "inStock": 20,
     "category": "men",
     "sub_category": "t-shirts",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -672,7 +672,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "wallets",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -690,7 +690,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "wallets",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -709,7 +709,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "wallets",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -727,7 +727,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "wallets",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -746,7 +746,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "wallets",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -765,7 +765,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "wallets",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -784,7 +784,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "wallets",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -804,7 +804,7 @@
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
     ],
-    "inStock": true,
+    "inStock": 50,
     "category": "men",
     "sub_category": "wallets",
     "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",

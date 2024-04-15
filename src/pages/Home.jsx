@@ -8,7 +8,7 @@ import WhyUs from "@/components/WhyUs";
 
 const Home = () => {
   return (
-    <div className="bg-ghost pt-5">
+    <div className="bg-ghost py-5">
       <div className="container">
         <Hero />
         <WhyUs />
