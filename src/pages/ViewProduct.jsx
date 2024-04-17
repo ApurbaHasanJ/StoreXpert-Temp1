@@ -40,10 +40,10 @@ const ViewProduct = () => {
   return (
     <section className="container mt-8 mb-16">
       <div className="flex max-md:flex-col items-start gap-6 mb-16">
-        <div className="">
-          <div className="max-w-md bg-ghost border relative rounded-xl">
+        <div className="max-w-md w-full">
+          <div className=" bg-ghost border relative rounded-xl">
             <img
-              className="rounded-xl aspect-square w-full"
+              className="rounded-xl w-full h-full aspect-square"
               src={viewImg ? viewImg : product?.images[0]}
               alt={product?.title}
             />
@@ -56,13 +56,13 @@ const ViewProduct = () => {
             </span>
           </div>
           <Carousel>
-            <CarouselContent className="flex ml-0 items-center gap-3 mt-2 max-w-md w-full">
+            <CarouselContent className="flex ml-0 items-center gap-3 mt-2">
               {product?.images.map((img, i) => (
                 <CarouselItem
                   key={i}
                   onClick={() => handleViewImg(img)}
                   className={cn(
-                    "border-2 basis-auto border-secondary/20 p-0 w-28 h-28 bg-ghost/60 rounded-lg overflow-hidden",
+                    "border-2 basis-auto border-secondary/20 p-0 w-28 h-28 bg-ghost/60 rounded-lg",
                     viewImg == img ? "border-primary/40" : "border-secondary/20"
                   )}>
                   <Card>
@@ -74,19 +74,6 @@ const ViewProduct = () => {
               ))}
             </CarouselContent>
           </Carousel>
-          {/* <div className="flex items-center gap-3 mt-2 overflow-x-scroll max-w-md w-full">
-            {product?.images.map((img, i) => (
-              <div
-                key={i}
-                onClick={() => handleViewImg(img)}
-                className={cn(
-                  "border-2 border-secondary/20 w-28 h-28 bg-ghost/60 rounded-lg overflow-hidden",
-                  viewImg == img ? "border-primary/40" : "border-secondary/20"
-                )}>
-                <img src={img} alt="" />
-              </div>
-            ))}
-          </div> */}
         </div>
         {/* desc */}
         <div className="flex flex-col w-full">
