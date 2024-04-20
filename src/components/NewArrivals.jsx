@@ -7,7 +7,7 @@ const NewArrivals = () => {
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    fetch("products.json")
+    fetch("/src/products.json")
       .then((res) => res.json())
       .then((data) => {
         // console.log({data});

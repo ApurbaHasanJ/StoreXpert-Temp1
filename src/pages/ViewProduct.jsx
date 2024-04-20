@@ -14,37 +14,32 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import RelatedProducts from "@/components/shared/RelatedProducts";
+import useCarts from "@/components/hooks/useCarts";
+import products from "/src/products.json";
 
 const ViewProduct = () => {
   const param = useParams();
-  const [products, setProducts] = useState([]);
+  const [product, setProduct] = useState();
   const [viewImg, setViewImg] = useState("");
+  const { handleAddCart } = useCarts();
 
   useEffect(() => {
-    fetch("/products.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setProducts(data);
-      });
-  }, []);
-
-  // get actual product
-  const product = products.find((product) => product._id == param.id);
-
-  const handleViewImg = (img) => {
-    setViewImg(img);
-  };
+    setProduct(products?.find((product) => product._id == param.id));
+    
+    setViewImg(product?.images[0]);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [param.id, product?.images]);
 
   console.log(product);
+
   return (
     <section className="container mt-8 mb-16">
       <div className="flex max-md:flex-col items-start gap-6 mb-16">
         <div className="max-w-md w-full">
-          <div className=" bg-ghost border relative rounded-xl">
+          <div className=" bg-ghost border relative rounded-xl overflow-hidden">
             <img
-              className="rounded-xl w-full h-full aspect-square"
-              src={viewImg ? viewImg : product?.images[0]}
+              className="max-w-md w-full h-full aspect-square"
+              src={viewImg}
               alt={product?.title}
             />
             <span
@@ -60,9 +55,9 @@ const ViewProduct = () => {
               {product?.images.map((img, i) => (
                 <CarouselItem
                   key={i}
-                  onClick={() => handleViewImg(img)}
+                  onClick={() => setViewImg(img)}
                   className={cn(
-                    "border-2 basis-auto border-secondary/20 p-0 w-28 h-28 bg-ghost/60 rounded-lg",
+                    "border-2 basis-auto border-secondary/20 p-0 w-24 h-24 bg-ghost/60 rounded-lg overflow-hidden",
                     viewImg == img ? "border-primary/40" : "border-secondary/20"
                   )}>
                   <Card>
@@ -110,6 +105,7 @@ const ViewProduct = () => {
                 Order Now
               </Button>
               <Button
+                onClick={() => handleAddCart(product._id, 1)}
                 size="lg"
                 variant="outline"
                 className="flex mt-4 justify-center items-center gap-2 w-full text-xl py-2 rounded-full">

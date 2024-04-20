@@ -1,14 +1,18 @@
 import Cart from "@/components/shared/Cart";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const Checkout = () => {
+  const [deliveryCharge, setDeliveryCharge] = useState(0);
+
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm();
+  window.scrollTo({ top: 0 });
 
   const onSubmit = (data) => {
     console.log(data);
@@ -17,7 +21,7 @@ const Checkout = () => {
   return (
     <section className="bg-ghost  py-10">
       <div className="container flex max-lg:flex-col-reverse gap-5">
-        <div className="bg-white shadow-md rounded-lg p-5 lg:w-1/2">
+        <div className="bg-white shadow-md rounded-lg p-5 lg:w-1/2 h-fit">
           <p className="text-center md:text-xl text-lg font-medium mb-10">
             অর্ডারটি কনফার্ম করতে আপনার নাম, ঠিকানা, মোবাইল নাম্বার লিখে &apos;
             <span className="text-primary font-semibold">
@@ -115,6 +119,7 @@ const Checkout = () => {
                 <div className="">
                   <input
                     type="radio"
+                    onClick={() => setDeliveryCharge(60)}
                     id="deliveryAreaWithinDhaka"
                     name="deliveryArea"
                     value="withinDhaka"
@@ -132,6 +137,7 @@ const Checkout = () => {
                 <div className="">
                   <input
                     type="radio"
+                    onClick={() => setDeliveryCharge(150)}
                     id="deliveryAreaOutsideDhaka"
                     name="deliveryArea"
                     value="outsideDhaka"
@@ -163,7 +169,7 @@ const Checkout = () => {
           </form>
         </div>
         <div className="lg:w-1/2">
-          <Cart />
+          <Cart deliveryCharge={deliveryCharge} />
         </div>
       </div>
     </section>

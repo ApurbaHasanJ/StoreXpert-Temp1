@@ -7,7 +7,7 @@ const AllProducts = () => {
   const [viewProducts, setViewProducts] = useState(15);
 
   useEffect(() => {
-    fetch("products.json")
+    fetch("/src/products.json")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

@@ -1,4 +1,4 @@
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink as NavLink } from "react-router-hash-link";
 import { GoHome } from "react-icons/go";
 import { IoFlashOutline } from "react-icons/io5";
 
@@ -33,13 +33,13 @@ const NavItems = () => {
   return (
     <>
       {navItems.map((nav, index) => (
-        <NavHashLink
+        <NavLink
           key={index}
           to={nav?.url}
           smooth
           className="nav-item flex flex-col items-center capitalize">
           <nav.icon className="md:hidden text-lg" /> <span>{nav?.item}</span>
-        </NavHashLink>
+        </NavLink>
       ))}
     </>
   );

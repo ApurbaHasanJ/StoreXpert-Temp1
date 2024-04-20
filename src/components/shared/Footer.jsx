@@ -4,12 +4,12 @@ import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { title: "Terms & Conditions", url: "terms-and-conditions" },
-  { title: "Return & Refund Policy", url: "return-and-refund-policy" },
-  { title: "After-Sale Support", url: "after-sale-support" },
-  { title: "Replacement Warranty", url: "replacement warranty" },
-  { title: "Privacy Policy", url: "privacy-policy" },
-  { title: "Shipping or Delivery", url: "shipping-or-delivery" },
+  { title: "Terms & Conditions", url: "/terms-and-conditions" },
+  { title: "Return & Refund Policy", url: "/return-and-refund-policy" },
+  { title: "After-Sale Support", url: "/after-sale-support" },
+  { title: "Replacement Warranty", url: "/replacement-warranty" },
+  { title: "Privacy Policy", url: "/privacy-policy" },
+  { title: "Shipping or Delivery", url: "/shipping-or-delivery" },
 ];
 const Footer = () => {
   const location = useLocation();

@@ -6,36 +6,17 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { FaMinus, FaPlus } from "react-icons/fa6";
+import { FaMinus, FaPlus, FaRightLong } from "react-icons/fa6";
 import { IoCallOutline } from "react-icons/io5";
 import { MdDeleteForever } from "react-icons/md";
 import { BsStarFill } from "react-icons/bs";
 import { useLocation } from "react-router-dom";
+import useCarts from "../hooks/useCarts";
+import products from "/src/products.json";
+import { useState } from "react";
+import { Button, buttonVariants } from "../ui/button";
 import { cn } from "@/lib/utils";
-
-const products = [
-  {
-    title:
-      "Multi-Function Professional Blender, Pro Grade, Best 2.5 liters Container, 6000W",
-    img: "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
-    quantity: 2,
-    price: 600,
-  },
-  {
-    title:
-      "Multi-Function Professional Blender, Pro Grade, Best 2.5 liters Container, 6000W",
-    img: "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
-    quantity: 2,
-    price: 600,
-  },
-  {
-    title:
-      "Multi-Function Professional Blender, Pro Grade, Best 2.5 liters Container, 6000W",
-    img: "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
-    quantity: 2,
-    price: 600,
-  },
-];
+import { Link } from "react-router-dom";
 
 export const Stars = () => {
   return (
@@ -47,54 +28,148 @@ export const Stars = () => {
   );
 };
 
-const Cart = () => {
+const Cart = ({ deliveryCharge }) => {
   const location = useLocation();
+  const { carts, handleAddCart, handleRemoveCart } = useCarts();
+
+  // getting carts from products list
+  const cartItems = carts?.map((cart) => {
+    const product = products?.find((product) => product?._id === cart._id);
+    return { ...product, quantity: cart.quantity };
+  });
+
+  // calculating subtotal
+  const subTotal = cartItems.reduce(
+    (acc, item) =>
+      acc +
+      item.quantity *
+        (item.disc
+          ? Math.floor(((100 - item.disc) / 100) * item.price)
+          : item.price),
+    0
+  );
+
+  console.log(subTotal);
   return (
     <section
-      className={cn(location?.pathname === "/cart" ? "mt-8 mb-16 container" : "")}>
-      <div className="bg-white border-t border-ghost shadow-md rounded-xl md:p-5 p-2">
+      className={location?.pathname === "/cart" ? "mt-8 mb-16 container" : ""}>
+      <div className="bg-white border-t border-ghost select-none shadow-md rounded-xl md:p-5 p-2">
         <p className="text-center bg-ghost text-secondary md:text-2xl text-xl font-semibold rounded-md p-3">
           আপনার অর্ডার
         </p>
-        <div className="mt-5 border border-secondary/30 rounded-lg">
-          <Table className="">
-            <TableHeader>
-              <TableRow>
-                <TableHead className="text-center">Product</TableHead>
-                <TableHead className="text-center border-x">Quantity</TableHead>
-                <TableHead className="text-center">Price</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {products?.map((product, i) => (
-                <TableRow key={i}>
-                  <TableCell className="font-medium flex items-center gap-3">
-                    <div>
-                      <MdDeleteForever className="text-xl md:text-2xl text-red-600" />
-                    </div>
-                    <img
-                      className="w-20 aspect-square bg-ghost rounded-lg"
-                      src={product?.img}
-                      alt={"item" + i + 1}
-                    />
-                    <p className="max-sm:text-xs">{product?.title}</p>
-                  </TableCell>
-                  <TableCell className="border-x">
-                    <div className="flex items-center justify-center gap-3 font-medium text-secondary">
-                      <FaMinus className="bg-secondary/40 hover:text-primary w-5 h-5 p-1 rounded" />
-                      {product?.quantity}
-                      <FaPlus className="bg-secondary/40 hover:text-primary w-5 h-5 p-1 rounded" />
-                    </div>
-                  </TableCell>
-                  <TableCell className="text-center font-medium text-secondary">
-                    Tk. {product?.price}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-        <div className="text-center mt-10">
+        {
+          <>
+            {" "}
+            <div className="mt-5 border border-secondary/30 rounded-lg">
+              <Table className="">
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="text-center">Product</TableHead>
+                    <TableHead className="text-center border-x">
+                      Quantity
+                    </TableHead>
+                    <TableHead className="text-center">Price</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {cartItems.length ? (
+                    cartItems?.map((cart, i) => (
+                      <TableRow key={i}>
+                        <TableCell className="font-medium flex items-center gap-3">
+                          <div>
+                            <MdDeleteForever
+                              onClick={() => handleRemoveCart(cart?._id)}
+                              className="text-xl md:text-2xl text-red-600"
+                            />
+                          </div>
+                          <img
+                            className="w-20 aspect-square bg-ghost rounded-lg"
+                            src={cart?.images[0]}
+                            alt={"item" + i + 1}
+                          />
+                          <p className="max-sm:text-xs text-secondary/80 capitalize">
+                            {cart?.title}
+                          </p>
+                        </TableCell>
+                        <TableCell className="border-x">
+                          <div className="flex items-center justify-center gap-3 font-medium text-secondary">
+                            <FaMinus
+                              onClick={
+                                cart.quantity > 1
+                                  ? () => handleAddCart(cart?._id, -1)
+                                  : undefined
+                              }
+                              className="bg-secondary/40 hover:text-primary w-5 h-5 p-1 rounded"
+                            />
+                            {cart?.quantity}
+                            <FaPlus
+                              onClick={() => handleAddCart(cart?._id, 1)}
+                              className="bg-secondary/40 hover:text-primary w-5 h-5 p-1 rounded"
+                            />
+                          </div>
+                        </TableCell>
+                        <TableCell className="text-center font-medium text-secondary">
+                          Tk.{" "}
+                          {cart?.disc
+                            ? Math.floor(
+                                ((100 - cart?.disc) / 100) * cart?.price
+                              )
+                            : cart?.price}
+                        </TableCell>
+                      </TableRow>
+                    ))
+                  ) : (
+                    // show warning if no carts available
+                    <TableRow>
+                      <TableCell className="text-right text-red-500 font-semibold md:text-xl">
+                        Sorry No Carts Available
+                      </TableCell>
+                    </TableRow>
+                  )}
+                </TableBody>
+              </Table>
+            </div>
+            {/* display total amount */}
+            <div className="rounded-lg shadow-sm text-secondary border p-2 my-5 w-fit text-right font-medium ml-auto">
+              <Table>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>Subtotal</TableCell>
+                    <TableCell className="border-l">Tk. {subTotal}</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Delivery Charge (+)</TableCell>
+                    <TableCell className="border-l">
+                      Tk.{deliveryCharge ? deliveryCharge : 0}
+                    </TableCell>
+                  </TableRow>
+                  <TableRow className="font-bold text-xl">
+                    <TableCell>Total</TableCell>
+                    <TableCell className="border-l">
+                      Tk. {subTotal + (deliveryCharge ? deliveryCharge : 0)}
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </div>
+            <div
+              className={cn(
+                "md:mx-auto max-md:ml-auto w-fit",
+                location?.pathname === "/checkout" && "hidden"
+              )}>
+              <Link
+                to="/checkout"
+                type="button"
+                className={cn(
+                  buttonVariants(),
+                  "rounded-full px-7 flex items-center gap-2"
+                )}>
+                <span>Proceed To Checkout</span> <FaRightLong />
+              </Link>
+            </div>
+          </>
+        }
+        <div className="text-center">
           <div className="mt-5 px-7 py-3 border-2 border-secondary/40 border-dashed text-secondary/80 rounded-lg">
             <p className="md:text-xl font-medium">
               এই পণ্য সম্পর্কে জানতে আমাদের কল করুনঃ
@@ -103,9 +178,9 @@ const Cart = () => {
               <IoCallOutline /> <span>01710-696950</span>
             </div>
           </div>
-          <div className="flex items-baseline justify-center gap-3">
+          <div className="flex items-baseline justify-center ">
             <Stars />
-            <p className="mt-3 text-secondary">
+            <p className="mt-3 px-2 text-secondary">
               অর্ডার কনফার্ম এর ৪৮-৭২ ঘন্টার মধ্যে ক্যাশ অন ডেলিভারি
             </p>
             <Stars />

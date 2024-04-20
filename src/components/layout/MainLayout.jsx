@@ -11,7 +11,7 @@ const MainLayout = () => {
       <Navbar />
       <Outlet />
       <Footer />
-      <PhoneNavbar/>
+      <PhoneNavbar />
     </>
   );
 };

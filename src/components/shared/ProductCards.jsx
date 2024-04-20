@@ -1,5 +1,5 @@
 import { FaCartPlus } from "react-icons/fa6";
-import { Button } from "../ui/button";
+import { Button, buttonVariants } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 
@@ -23,12 +23,13 @@ const ProductCards = ({ products }) => {
                 {product?.disc}&#37;
               </span>
             </div>
+
+            <p className="text-sm hover:text-primary hover:underline font-semibold mt-2 mb-1 lg:h-10 md:h-14 h-11">
+              {product?.title.length > 45
+                ? product?.title.substring(0, 45) + "..."
+                : product?.title}
+            </p>
           </Link>
-          <p className="text-sm font-semibold mt-2 mb-1 lg:h-10 md:h-14 h-11">
-            {product?.title.length > 45
-              ? product?.title.substring(0, 45) + "..."
-              : product?.title}
-          </p>
           <div className="flex items-baseline gap-3 mb-3">
             <span className="text-primary font-bold md:text-2xl text-lg">
               <span className="text-4xl">৳</span>{" "}
@@ -45,11 +46,14 @@ const ProductCards = ({ products }) => {
             </span>
           </div>
 
-          <Button
-            size="lg"
-            className="flex justify-center items-center gap-2 w-full">
+          <Link
+            to="/checkout"
+            className={cn(
+              buttonVariants({ size: "lg" }),
+              "flex justify-center items-center gap-2 w-full"
+            )}>
             <FaCartPlus /> <span>Order Now</span>
-          </Button>
+          </Link>
         </div>
       ))}
     </div>
