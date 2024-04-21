@@ -13,8 +13,7 @@ import { BsStarFill } from "react-icons/bs";
 import { useLocation } from "react-router-dom";
 import useCarts from "../hooks/useCarts";
 import products from "/src/products.json";
-import { useState } from "react";
-import { Button, buttonVariants } from "../ui/button";
+import { buttonVariants } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 
@@ -49,7 +48,7 @@ const Cart = ({ deliveryCharge }) => {
     0
   );
 
-  console.log(subTotal);
+  // console.log(subTotal);
   return (
     <section
       className={location?.pathname === "/cart" ? "mt-8 mb-16 container" : ""}>
@@ -88,14 +87,16 @@ const Cart = ({ deliveryCharge }) => {
                             alt={"item" + i + 1}
                           />
                           <p className="max-sm:text-xs text-secondary/80 capitalize">
-                            {cart?.title}
+                            {cart?.title.length > 45
+                              ? cart?.title.substring(0, 45) + "..."
+                              : cart?.title}
                           </p>
                         </TableCell>
                         <TableCell className="border-x">
                           <div className="flex items-center justify-center gap-3 font-medium text-secondary">
                             <FaMinus
                               onClick={
-                                cart.quantity > 1
+                                cart?.quantity > 1
                                   ? () => handleAddCart(cart?._id, -1)
                                   : undefined
                               }

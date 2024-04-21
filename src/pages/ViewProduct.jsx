@@ -1,6 +1,6 @@
 import ProductDesc from "@/components/shared/ProductDesc";
 import ServiceDesc from "@/components/shared/ServiceDesc";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { BsWhatsapp } from "react-icons/bs";
@@ -16,6 +16,7 @@ import {
 import RelatedProducts from "@/components/shared/RelatedProducts";
 import useCarts from "@/components/hooks/useCarts";
 import products from "/src/products.json";
+import { Link } from "react-router-dom";
 
 const ViewProduct = () => {
   const param = useParams();
@@ -25,7 +26,7 @@ const ViewProduct = () => {
 
   useEffect(() => {
     setProduct(products?.find((product) => product._id == param.id));
-    
+
     setViewImg(product?.images[0]);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [param.id, product?.images]);
@@ -99,11 +100,16 @@ const ViewProduct = () => {
                   ৳ {product?.price}
                 </span>
               </div>
-              <Button
+              <Link
+                to="/checkout"
+                onClick={() => handleAddCart(product._id, 1)}
                 size="lg"
-                className="w-full text-xl py-2 mt-7 rounded-full">
+                className={cn(
+                  buttonVariants(),
+                  "w-full text-xl py-2 mt-7 rounded-full"
+                )}>
                 Order Now
-              </Button>
+              </Link>
               <Button
                 onClick={() => handleAddCart(product._id, 1)}
                 size="lg"

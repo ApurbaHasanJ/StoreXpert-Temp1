@@ -14,14 +14,13 @@ import SearchResult from "./SearchResult";
 
 const Navbar = () => {
   const [query, setQuery] = useState("");
-  const { carts, totalQuantity } = useContext(CartContext);
+  const { carts} = useCarts();
   const [showCategories, setShowCategories] = useState(false);
 
   // const totalQuantity = carts.reduce(
   //   (total, cartItem) => total + cartItem.quantity,
   //   0
   // );
-  console.log("navbar", totalQuantity);
 
   const searchedProduct = products?.filter((product) =>
     query.toLocaleLowerCase() === ""
@@ -60,7 +59,7 @@ const Navbar = () => {
         <Link to="/cart" className="relative">
           <SlHandbag className="text-secondary md:text-3xl text-2xl" />
           <span className="bg-primary text-sm rounded-full h-5 w-5 text-center text-white absolute -right-2 -bottom-2">
-            {totalQuantity}
+            {carts.length}
           </span>
         </Link>
       </div>

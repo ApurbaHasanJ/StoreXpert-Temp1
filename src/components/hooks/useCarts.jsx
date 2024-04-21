@@ -7,13 +7,8 @@ const useCarts = () => {
   console.log({ carts });
 
   useEffect(() => {
-    const currentCarts = JSON.parse(localStorage.getItem("wownex_carts")) || [];
-    setCarts(currentCarts);
+    setCarts(JSON.parse(localStorage.getItem("wownex_carts")) || []);
   }, []);
-
-  const totalQuantity = () => {
-    return carts.reduce((acc, item) => acc + item.quantity, 0);
-  };
 
   // Add to carts
   const handleAddCart = (_id, quantity) => {
@@ -32,9 +27,6 @@ const useCarts = () => {
     }
     localStorage.setItem("wownex_carts", JSON.stringify(currentCart));
     setCarts(currentCart);
-    if (totalQuantity) {
-      totalQuantity();
-    }
   };
 
   // handle remove from cart
@@ -45,7 +37,7 @@ const useCarts = () => {
     toast.success("Item removed successfully");
   };
 
-  return { handleAddCart, carts, handleRemoveCart, totalQuantity };
+  return { handleAddCart, carts, handleRemoveCart };
 };
 
 export default useCarts;

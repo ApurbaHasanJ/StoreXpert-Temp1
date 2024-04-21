@@ -1,9 +1,11 @@
 import { FaCartPlus } from "react-icons/fa6";
-import { Button, buttonVariants } from "../ui/button";
+import { buttonVariants } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
+import useCarts from "../hooks/useCarts";
 
 const ProductCards = ({ products }) => {
+  const { handleAddCart } = useCarts();
   return (
     <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 md:gap-5 gap-3 gap-y-8">
       {products?.map((product) => (
@@ -48,6 +50,7 @@ const ProductCards = ({ products }) => {
 
           <Link
             to="/checkout"
+            onClick={() => handleAddCart(product._id, 1)}
             className={cn(
               buttonVariants({ size: "lg" }),
               "flex justify-center items-center gap-2 w-full"
