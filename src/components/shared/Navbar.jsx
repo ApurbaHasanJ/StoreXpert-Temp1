@@ -1,20 +1,19 @@
 import { SlHandbag } from "react-icons/sl";
-import { Button, buttonVariants } from "../ui/button";
+import { buttonVariants } from "../ui/button";
 import products from "/src/products.json";
 import { Link } from "react-router-dom";
 import { FaSortDown } from "react-icons/fa6";
 import { BsSearch, BsTelephone } from "react-icons/bs";
 import NavItems from "./NavItems";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import Categories from "../Categories";
 import { cn } from "@/lib/utils";
 import useCarts from "../hooks/useCarts";
-import { CartContext } from "@/providers/CartProvider";
 import SearchResult from "./SearchResult";
 
 const Navbar = () => {
   const [query, setQuery] = useState("");
-  const { carts} = useCarts();
+  const { carts } = useCarts();
   const [showCategories, setShowCategories] = useState(false);
 
   // const totalQuantity = carts.reduce(
@@ -81,7 +80,9 @@ const Navbar = () => {
             </Link>
           ))
         ) : (
-          <p className="text-center mt-10 text-primary font-medium">No products found</p>
+          <p className="text-center mt-10 text-primary font-medium">
+            No products found
+          </p>
         )}
       </div>
 
@@ -96,7 +97,7 @@ const Navbar = () => {
           </div>
           <div
             className={cn(
-              "fixed duration-500 z-10 top-[198px]",
+              "lg:hidden fixed duration-500 z-10 md:top-[185px] top-[178px]",
               showCategories ? "left-0" : "-left-[400px]"
             )}>
             <Categories />
