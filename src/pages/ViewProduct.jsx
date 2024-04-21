@@ -1,6 +1,6 @@
 import ProductDesc from "@/components/shared/ProductDesc";
 import ServiceDesc from "@/components/shared/ServiceDesc";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { BsWhatsapp } from "react-icons/bs";
@@ -14,37 +14,33 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import RelatedProducts from "@/components/shared/RelatedProducts";
+import useCarts from "@/components/hooks/useCarts";
+import products from "/src/products.json";
+import { Link } from "react-router-dom";
 
 const ViewProduct = () => {
   const param = useParams();
-  const [products, setProducts] = useState([]);
+  const [product, setProduct] = useState();
   const [viewImg, setViewImg] = useState("");
+  const { handleAddCart } = useCarts();
 
   useEffect(() => {
-    fetch("/products.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setProducts(data);
-      });
-  }, []);
+    setProduct(products?.find((product) => product._id == param.id));
 
-  // get actual product
-  const product = products.find((product) => product._id == param.id);
-
-  const handleViewImg = (img) => {
-    setViewImg(img);
-  };
+    setViewImg(product?.images[0]);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [param.id, product?.images]);
 
   console.log(product);
+
   return (
     <section className="container mt-8 mb-16">
       <div className="flex max-md:flex-col items-start gap-6 mb-16">
-        <div className="">
-          <div className="max-w-md bg-ghost border relative rounded-xl">
+        <div className="max-w-md w-full">
+          <div className=" bg-ghost border relative rounded-xl overflow-hidden">
             <img
-              className="rounded-xl aspect-square w-full"
-              src={viewImg ? viewImg : product?.images[0]}
+              className="max-w-md w-full h-full aspect-square"
+              src={viewImg}
               alt={product?.title}
             />
             <span
@@ -56,13 +52,13 @@ const ViewProduct = () => {
             </span>
           </div>
           <Carousel>
-            <CarouselContent className="flex ml-0 items-center gap-3 mt-2 max-w-md w-full">
+            <CarouselContent className="flex ml-0 items-center gap-3 mt-2">
               {product?.images.map((img, i) => (
                 <CarouselItem
                   key={i}
-                  onClick={() => handleViewImg(img)}
+                  onClick={() => setViewImg(img)}
                   className={cn(
-                    "border-2 basis-auto border-secondary/20 p-0 w-28 h-28 bg-ghost/60 rounded-lg overflow-hidden",
+                    "border-2 basis-auto border-secondary/20 p-0 w-24 h-24 bg-ghost/60 rounded-lg overflow-hidden",
                     viewImg == img ? "border-primary/40" : "border-secondary/20"
                   )}>
                   <Card>
@@ -74,19 +70,6 @@ const ViewProduct = () => {
               ))}
             </CarouselContent>
           </Carousel>
-          {/* <div className="flex items-center gap-3 mt-2 overflow-x-scroll max-w-md w-full">
-            {product?.images.map((img, i) => (
-              <div
-                key={i}
-                onClick={() => handleViewImg(img)}
-                className={cn(
-                  "border-2 border-secondary/20 w-28 h-28 bg-ghost/60 rounded-lg overflow-hidden",
-                  viewImg == img ? "border-primary/40" : "border-secondary/20"
-                )}>
-                <img src={img} alt="" />
-              </div>
-            ))}
-          </div> */}
         </div>
         {/* desc */}
         <div className="flex flex-col w-full">
@@ -117,12 +100,18 @@ const ViewProduct = () => {
                   ৳ {product?.price}
                 </span>
               </div>
-              <Button
+              <Link
+                to="/checkout"
+                onClick={() => handleAddCart(product._id, 1)}
                 size="lg"
-                className="w-full text-xl py-2 mt-7 rounded-full">
+                className={cn(
+                  buttonVariants(),
+                  "w-full text-xl py-2 mt-7 rounded-full"
+                )}>
                 Order Now
-              </Button>
+              </Link>
               <Button
+                onClick={() => handleAddCart(product._id, 1)}
                 size="lg"
                 variant="outline"
                 className="flex mt-4 justify-center items-center gap-2 w-full text-xl py-2 rounded-full">

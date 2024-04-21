@@ -4,12 +4,12 @@ import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { title: "Terms & Conditions", url: "terms-and-conditions" },
-  { title: "Return & Refund Policy", url: "return-and-refund-policy" },
-  { title: "After-Sale Support", url: "after-sale-support" },
-  { title: "Replacement Warranty", url: "replacement warranty" },
-  { title: "Privacy Policy", url: "privacy-policy" },
-  { title: "Shipping or Delivery", url: "shipping-or-delivery" },
+  { title: "Terms & Conditions", url: "/terms-and-conditions" },
+  { title: "Return & Refund Policy", url: "/return-and-refund-policy" },
+  { title: "After-Sale Support", url: "/after-sale-support" },
+  { title: "Replacement Warranty", url: "/replacement-warranty" },
+  { title: "Privacy Policy", url: "/privacy-policy" },
+  { title: "Shipping or Delivery", url: "/shipping-or-delivery" },
 ];
 const Footer = () => {
   const location = useLocation();
@@ -34,7 +34,7 @@ const Footer = () => {
             "flex items-center max-md:flex-col justify-center md:gap-10 gap-5 py-10",
             location?.pathname === "/"
               ? "bg-white"
-              : "bg-ghost w-full rounded-xl mb-8"
+              : "bg-ghost w-full rounded-xl my-8"
           )}>
           <div onClick={handleCallClick} className="flex items-center gap-3">
             <IoCallOutline className="text-primary" /> Call Us
@@ -101,7 +101,7 @@ const Footer = () => {
               <Link
                 target="blank"
                 to="https://apurbahasanj.netlify.app"
-                className="hover:text-primary hover:underline font-semibold">
+                className="hover:text-primary/80 hover:underline font-semibold">
                 VRTX-Forge
               </Link>
             </p>

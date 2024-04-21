@@ -11,7 +11,7 @@
 }
 
 .nav-item {
-  @apply text-base font-bold tracking-wide hover:text-slate-200 transition-colors hover:max-md:bg-primary/10 duration-200 w-full whitespace-nowrap;
+  @apply max-md:text-sm md:font-bold font-medium tracking-wide hover:text-slate-200 transition-colors duration-200 w-full whitespace-nowrap;
 }
 
 @layer base {

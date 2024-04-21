@@ -1,10 +1,10 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const ProductDesc = ({ product }) => {
-  console.log(product);
+  // console.log(product);
   return (
     <section>
-      <Tabs defaultValue="account" className="">
+      <Tabs defaultValue="product-details" className="">
         <TabsList>
           <TabsTrigger value="product-details">Product Details</TabsTrigger>
           <TabsTrigger value="delivery-information">
