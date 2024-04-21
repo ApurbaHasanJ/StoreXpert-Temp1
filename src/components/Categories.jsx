@@ -30,7 +30,7 @@ const categories = [
 
 const Categories = () => {
   return (
-    <div className="bg-white md:rounded-lg rounded-br-lg shadow-md p-2 max-md:pb-6 h-full pr-6 overflow-y-scroll max-md:text-sm">
+    <div className="bg-white lg:rounded-lg rounded-br-lg shadow-md p-2 max-md:pb-6 h-full pr-6 overflow-y-scroll max-md:text-sm">
       {categories.map((category, index) => (
         <Link
           key={index}
