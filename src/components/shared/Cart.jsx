@@ -11,11 +11,15 @@ import { IoCallOutline } from "react-icons/io5";
 import { MdDeleteForever } from "react-icons/md";
 import { BsStarFill } from "react-icons/bs";
 import { useLocation } from "react-router-dom";
-import useCarts from "../hooks/useCarts";
-import products from "/src/products.json";
 import { buttonVariants } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  decreaseQuantity,
+  increaseQuantity,
+  removeFromCart,
+} from "@/redux/features/cart";
 
 export const Stars = () => {
   return (
@@ -29,24 +33,40 @@ export const Stars = () => {
 
 const Cart = ({ deliveryCharge }) => {
   const location = useLocation();
-  const { carts, handleAddCart, handleRemoveCart } = useCarts();
+  // const { carts, handleAddCart, handleRemoveCart } = useCarts();
 
-  // getting carts from products list
-  const cartItems = carts?.map((cart) => {
-    const product = products?.find((product) => product?._id === cart._id);
-    return { ...product, quantity: cart.quantity };
-  });
+  // // getting carts from products list
+  // const cartItems = carts?.map((cart) => {
+  //   const product = products?.find((product) => product?._id === cart._id);
+  //   return { ...product, quantity: cart.quantity };
+  // });
+
+  const products = useSelector((state) => state?.cart?.products);
+  const totalPrice = useSelector((state) => state?.cart?.totalPrice);
+  const dispatch = useDispatch();
+
+  const handleIncreaseQuantity = (id) => {
+    dispatch(increaseQuantity(id));
+  };
+
+  const handleDecreaseQuantity = (id) => {
+    dispatch(decreaseQuantity(id));
+  };
+
+  const handleRemoveFromCart = (id) => {
+    dispatch(removeFromCart(id));
+  };
 
   // calculating subtotal
-  const subTotal = cartItems.reduce(
-    (acc, item) =>
-      acc +
-      item.quantity *
-        (item.disc
-          ? Math.floor(((100 - item.disc) / 100) * item.price)
-          : item.price),
-    0
-  );
+  // const subTotal = cartItems.reduce(
+  //   (acc, item) =>
+  //     acc +
+  //     item.quantity *
+  //       (item.disc
+  //         ? Math.floor(((100 - item.disc) / 100) * item.price)
+  //         : item.price),
+  //   0
+  // );
 
   // console.log(subTotal);
   return (
@@ -71,13 +91,13 @@ const Cart = ({ deliveryCharge }) => {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {cartItems.length ? (
-                    cartItems?.map((cart, i) => (
+                  {products.length ? (
+                    products?.map((cart, i) => (
                       <TableRow key={i}>
                         <TableCell className="font-medium flex items-center gap-3">
                           <div>
                             <MdDeleteForever
-                              onClick={() => handleRemoveCart(cart?._id)}
+                              onClick={() => handleRemoveFromCart(cart?._id)}
                               className="text-xl md:text-2xl text-red-600"
                             />
                           </div>
@@ -94,17 +114,19 @@ const Cart = ({ deliveryCharge }) => {
                         </TableCell>
                         <TableCell className="border-x">
                           <div className="flex items-center justify-center gap-3 font-medium text-secondary">
-                            <FaMinus
-                              onClick={
-                                cart?.quantity > 1
-                                  ? () => handleAddCart(cart?._id, -1)
-                                  : undefined
-                              }
-                              className="bg-secondary/40 hover:text-primary w-5 h-5 p-1 rounded"
-                            />
+                            {cart?.quantity > 1 ? (
+                              <FaMinus
+                                onClick={() =>
+                                  handleDecreaseQuantity(cart?._id)
+                                }
+                                className="bg-secondary/40 hover:text-primary w-5 h-5 p-1 rounded"
+                              />
+                            ) : (
+                              <FaMinus className="bg-secondary/40 hover:text-primary w-5 h-5 p-1 rounded" />
+                            )}
                             {cart?.quantity}
                             <FaPlus
-                              onClick={() => handleAddCart(cart?._id, 1)}
+                              onClick={() => handleIncreaseQuantity(cart?._id)}
                               className="bg-secondary/40 hover:text-primary w-5 h-5 p-1 rounded"
                             />
                           </div>
@@ -136,7 +158,7 @@ const Cart = ({ deliveryCharge }) => {
                 <TableBody>
                   <TableRow>
                     <TableCell>Subtotal</TableCell>
-                    <TableCell className="border-l">Tk. {subTotal}</TableCell>
+                    <TableCell className="border-l">Tk. {totalPrice}</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>Delivery Charge (+)</TableCell>
@@ -147,7 +169,7 @@ const Cart = ({ deliveryCharge }) => {
                   <TableRow className="font-bold text-xl">
                     <TableCell>Total</TableCell>
                     <TableCell className="border-l">
-                      Tk. {subTotal + (deliveryCharge ? deliveryCharge : 0)}
+                      {/* Tk. {subTotal + (deliveryCharge ? deliveryCharge : 0)} */}
                     </TableCell>
                   </TableRow>
                 </TableBody>

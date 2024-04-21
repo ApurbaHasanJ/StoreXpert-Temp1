@@ -14,13 +14,11 @@ const FlashSale = () => {
       });
   }, []);
 
-  // console.log({products})
-
   // Memoize the products array to prevent unnecessary re-renders
   const memoizedProducts = useMemo(() => products.slice(0, 5), [products]);
 
   return (
-    <section id="flash-sale"  className="pt-5">
+    <section id="flash-sale" className="pt-5">
       <div className="bg-white rounded-lg shadow p-4">
         <div className="flex items-center justify-between border-b pb-4 mb-6">
           <div className="flex flex-wrap items-center md:gap-6 gap-2">

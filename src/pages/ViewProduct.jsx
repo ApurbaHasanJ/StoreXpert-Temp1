@@ -14,24 +14,28 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import RelatedProducts from "@/components/shared/RelatedProducts";
-import useCarts from "@/components/hooks/useCarts";
 import products from "/src/products.json";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart } from "@/redux/features/cart";
 
 const ViewProduct = () => {
   const param = useParams();
   const [product, setProduct] = useState();
   const [viewImg, setViewImg] = useState("");
-  const { handleAddCart } = useCarts();
+  const dispatch = useDispatch();
 
+  // setting default view img
   useEffect(() => {
-    setProduct(products?.find((product) => product._id == param.id));
-
-    setViewImg(product?.images[0]);
     window.scrollTo({ top: 0, behavior: "smooth" });
+    setProduct(products?.find((product) => product._id == param.id));
+    setViewImg(product?.images[0]);
   }, [param.id, product?.images]);
 
-  console.log(product);
+  // dispatch cart events
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  };
 
   return (
     <section className="container mt-8 mb-16">
@@ -102,7 +106,7 @@ const ViewProduct = () => {
               </div>
               <Link
                 to="/checkout"
-                onClick={() => handleAddCart(product._id, 1)}
+                onClick={() => handleAddToCart(product)}
                 size="lg"
                 className={cn(
                   buttonVariants(),
@@ -111,7 +115,7 @@ const ViewProduct = () => {
                 Order Now
               </Link>
               <Button
-                onClick={() => handleAddCart(product._id, 1)}
+                onClick={() => handleAddToCart(product)}
                 size="lg"
                 variant="outline"
                 className="flex mt-4 justify-center items-center gap-2 w-full text-xl py-2 rounded-full">

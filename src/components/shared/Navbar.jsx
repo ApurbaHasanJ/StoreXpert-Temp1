@@ -10,6 +10,7 @@ import Categories from "../Categories";
 import { cn } from "@/lib/utils";
 import useCarts from "../hooks/useCarts";
 import SearchResult from "./SearchResult";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [query, setQuery] = useState("");
@@ -20,6 +21,7 @@ const Navbar = () => {
   //   (total, cartItem) => total + cartItem.quantity,
   //   0
   // );
+  const selectedItem = useSelector((state) => state?.cart?.selectedItem);
 
   const searchedProduct = products?.filter((product) =>
     query.toLocaleLowerCase() === ""
@@ -58,7 +60,7 @@ const Navbar = () => {
         <Link to="/cart" className="relative">
           <SlHandbag className="text-secondary md:text-3xl text-2xl" />
           <span className="bg-primary text-sm rounded-full h-5 w-5 text-center text-white absolute -right-2 -bottom-2">
-            {carts.length}
+            {selectedItem}
           </span>
         </Link>
       </div>
