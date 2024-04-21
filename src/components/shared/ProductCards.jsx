@@ -2,10 +2,16 @@ import { FaCartPlus } from "react-icons/fa6";
 import { buttonVariants } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
-import useCarts from "../hooks/useCarts";
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart } from "@/redux/features/cart";
 
 const ProductCards = ({ products }) => {
-  const { handleAddCart } = useCarts();
+  const dispatch = useDispatch();
+
+  // dispatch cart events
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  };
   return (
     <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 md:gap-5 gap-3 gap-y-8">
       {products?.map((product) => (
@@ -50,7 +56,7 @@ const ProductCards = ({ products }) => {
 
           <Link
             to="/checkout"
-            onClick={() => handleAddCart(product._id, 1)}
+            onClick={() => handleAddToCart(product)}
             className={cn(
               buttonVariants({ size: "lg" }),
               "flex justify-center items-center gap-2 w-full"

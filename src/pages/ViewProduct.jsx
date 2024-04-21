@@ -23,17 +23,16 @@ const ViewProduct = () => {
   const param = useParams();
   const [product, setProduct] = useState();
   const [viewImg, setViewImg] = useState("");
-  // const { handleAddCart } = useCarts();
-
-  useEffect(() => {
-    setProduct(products?.find((product) => product._id == param.id));
-
-    setViewImg(product?.images[0]);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [param.id, product?.images]);
-
   const dispatch = useDispatch();
 
+  // setting default view img
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setProduct(products?.find((product) => product._id == param.id));
+    setViewImg(product?.images[0]);
+  }, [param.id, product?.images]);
+
+  // dispatch cart events
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
   };
@@ -52,8 +51,7 @@ const ViewProduct = () => {
               className={cn(
                 "bg-primary border border-ghost/80 text-ghost absolute top-0 left-0 rounded-br-xl rounded-tl-xl px-2 font-medium text-sm",
                 product?.disc ? "block" : "hidden"
-              )}
-            >
+              )}>
               {product?.disc}&#37;
             </span>
           </div>
@@ -66,8 +64,7 @@ const ViewProduct = () => {
                   className={cn(
                     "border-2 basis-auto border-secondary/20 p-0 w-24 h-24 bg-ghost/60 rounded-lg overflow-hidden",
                     viewImg == img ? "border-primary/40" : "border-secondary/20"
-                  )}
-                >
+                  )}>
                   <Card>
                     <CardContent>
                       <img src={img} alt="" />
@@ -86,8 +83,7 @@ const ViewProduct = () => {
               className={cn(
                 "text-lg mt-2",
                 product?.inStock ? "text-green-500" : "text-red-500"
-              )}
-            >
+              )}>
               {product?.inStock ? "In Stock" : "Sold Out"}
             </p>
           </div>
@@ -104,8 +100,7 @@ const ViewProduct = () => {
                   className={cn(
                     "line-through text-secondary block",
                     product?.disc ? "block" : "hidden"
-                  )}
-                >
+                  )}>
                   ৳ {product?.price}
                 </span>
               </div>
@@ -116,16 +111,14 @@ const ViewProduct = () => {
                 className={cn(
                   buttonVariants(),
                   "w-full text-xl py-2 mt-7 rounded-full"
-                )}
-              >
+                )}>
                 Order Now
               </Link>
               <Button
                 onClick={() => handleAddToCart(product)}
                 size="lg"
                 variant="outline"
-                className="flex mt-4 justify-center items-center gap-2 w-full text-xl py-2 rounded-full"
-              >
+                className="flex mt-4 justify-center items-center gap-2 w-full text-xl py-2 rounded-full">
                 <FaCartPlus /> <span>Add to Cart</span>
               </Button>
 

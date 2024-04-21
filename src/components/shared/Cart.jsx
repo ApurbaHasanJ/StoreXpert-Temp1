@@ -71,8 +71,7 @@ const Cart = ({ deliveryCharge }) => {
   // console.log(subTotal);
   return (
     <section
-      className={location?.pathname === "/cart" ? "mt-8 mb-16 container" : ""}
-    >
+      className={location?.pathname === "/cart" ? "mt-8 mb-16 container" : ""}>
       <div className="bg-white border-t border-ghost select-none shadow-md rounded-xl md:p-5 p-2">
         <p className="text-center bg-ghost text-secondary md:text-2xl text-xl font-semibold rounded-md p-3">
           আপনার অর্ডার
@@ -115,14 +114,16 @@ const Cart = ({ deliveryCharge }) => {
                         </TableCell>
                         <TableCell className="border-x">
                           <div className="flex items-center justify-center gap-3 font-medium text-secondary">
-                            <FaMinus
-                              onClick={
-                                cart?.quantity > 1
-                                  ? () => handleDecreaseQuantity(cart?._id)
-                                  : undefined
-                              }
-                              className="bg-secondary/40 hover:text-primary w-5 h-5 p-1 rounded"
-                            />
+                            {cart?.quantity > 1 ? (
+                              <FaMinus
+                                onClick={() =>
+                                  handleDecreaseQuantity(cart?._id)
+                                }
+                                className="bg-secondary/40 hover:text-primary w-5 h-5 p-1 rounded"
+                              />
+                            ) : (
+                              <FaMinus className="bg-secondary/40 hover:text-primary w-5 h-5 p-1 rounded" />
+                            )}
                             {cart?.quantity}
                             <FaPlus
                               onClick={() => handleIncreaseQuantity(cart?._id)}
@@ -178,16 +179,14 @@ const Cart = ({ deliveryCharge }) => {
               className={cn(
                 "md:mx-auto max-md:ml-auto w-fit",
                 location?.pathname === "/checkout" && "hidden"
-              )}
-            >
+              )}>
               <Link
                 to="/checkout"
                 type="button"
                 className={cn(
                   buttonVariants(),
                   "rounded-full px-7 flex items-center gap-2"
-                )}
-              >
+                )}>
                 <span>Proceed To Checkout</span> <FaRightLong />
               </Link>
             </div>

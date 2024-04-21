@@ -51,8 +51,7 @@ const Navbar = () => {
             className={cn(
               buttonVariants(),
               "md:px-8 bg-primary px-6 md:text-lg text-xs rounded-l-none rounded-r-3xl"
-            )}
-          >
+            )}>
             <BsSearch className="md:hidden text-white text-sm" />
             <span className="max-lg:hidden">Search</span>
           </Link>
@@ -71,16 +70,14 @@ const Navbar = () => {
           "container pt-5 bg-ghost rounded-b-lg shadow-md z-10 absolute top-[83px] right-0 left-0 min-h-[450px] max-h-[500px] h-full overflow-y-scroll",
           !query && "hidden",
           searchedProduct?.length && "grid md:grid-cols-2 grid-cols-1 gap-2"
-        )}
-      >
+        )}>
         {searchedProduct.length ? (
           searchedProduct?.map((product) => (
             <Link
               key={product?._id}
               to={`/products/${product?._id}`}
               onClick={() => setQuery("")}
-              className="flex items-center md:gap-6 gap-3 h-fit hover:bg-primary/10 rounded-md p-2"
-            >
+              className="flex items-center md:gap-6 gap-3 h-fit hover:bg-primary/10 rounded-md p-2">
               <SearchResult product={product} />
             </Link>
           ))
@@ -96,8 +93,7 @@ const Navbar = () => {
         <div className="container w-full flex items-center gap-5 justify-between">
           <div
             onClick={() => setShowCategories(!showCategories)}
-            className="flex items-center gap-3"
-          >
+            className="flex items-center gap-3">
             <h5>All Categories</h5>
             <FaSortDown />
           </div>
@@ -105,8 +101,7 @@ const Navbar = () => {
             className={cn(
               "lg:hidden fixed duration-500 z-10 md:top-[185px] top-[178px]",
               showCategories ? "left-0" : "-left-[400px]"
-            )}
-          >
+            )}>
             <Categories />
           </div>
 
