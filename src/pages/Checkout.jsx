@@ -9,7 +9,6 @@ const Checkout = () => {
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm();
 
@@ -114,7 +113,8 @@ const Checkout = () => {
             <div className="w-full mb-4">
               <label
                 htmlFor="deliveryArea"
-                className="text-gray-700 font-bold mr-4">
+                className="text-gray-700 font-bold mr-4"
+              >
                 ডেলিভারি এলাকা নির্বাচন করুন
                 <span className="text-red-500 text-xl">*</span>
               </label>
@@ -133,7 +133,8 @@ const Checkout = () => {
                   />
                   <label
                     htmlFor="deliveryAreaWithinDhaka"
-                    className="text-gray-500 text-lg font-medium w-full">
+                    className="text-gray-500 text-lg font-medium w-full"
+                  >
                     ঢাকার ভিতরে (৬০ টাকা)
                   </label>
                 </div>
@@ -151,7 +152,8 @@ const Checkout = () => {
                   />
                   <label
                     htmlFor="deliveryAreaOutsideDhaka"
-                    className="text-gray-500 text-lg font-medium w-full">
+                    className="text-gray-500 text-lg font-medium w-full"
+                  >
                     ঢাকার বাইরে (১৫০ টাকা)
                   </label>
                 </div>
