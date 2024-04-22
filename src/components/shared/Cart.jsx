@@ -42,8 +42,9 @@ const Cart = ({ deliveryCharge }) => {
   // });
 
   const products = useSelector((state) => state?.cart?.products);
-  const totalPrice = useSelector((state) => state?.cart?.totalPrice);
+  const subTotal = useSelector((state) => state?.cart?.subTotal);
   const dispatch = useDispatch();
+  console.log(subTotal);
 
   const handleIncreaseQuantity = (id) => {
     dispatch(increaseQuantity(id));
@@ -71,7 +72,8 @@ const Cart = ({ deliveryCharge }) => {
   // console.log(subTotal);
   return (
     <section
-      className={location?.pathname === "/cart" ? "mt-8 mb-16 container" : ""}>
+      className={location?.pathname === "/cart" ? "mt-8 mb-16 container" : ""}
+    >
       <div className="bg-white border-t border-ghost select-none shadow-md rounded-xl md:p-5 p-2">
         <p className="text-center bg-ghost text-secondary md:text-2xl text-xl font-semibold rounded-md p-3">
           আপনার অর্ডার
@@ -158,7 +160,7 @@ const Cart = ({ deliveryCharge }) => {
                 <TableBody>
                   <TableRow>
                     <TableCell>Subtotal</TableCell>
-                    <TableCell className="border-l">Tk. {totalPrice}</TableCell>
+                    <TableCell className="border-l">Tk. {subTotal}</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>Delivery Charge (+)</TableCell>
@@ -179,14 +181,16 @@ const Cart = ({ deliveryCharge }) => {
               className={cn(
                 "md:mx-auto max-md:ml-auto w-fit",
                 location?.pathname === "/checkout" && "hidden"
-              )}>
+              )}
+            >
               <Link
                 to="/checkout"
                 type="button"
                 className={cn(
                   buttonVariants(),
                   "rounded-full px-7 flex items-center gap-2"
-                )}>
+                )}
+              >
                 <span>Proceed To Checkout</span> <FaRightLong />
               </Link>
             </div>

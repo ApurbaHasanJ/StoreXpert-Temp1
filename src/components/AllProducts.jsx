@@ -22,7 +22,7 @@ const AllProducts = () => {
           All <span className="text-primary">Products</span>
         </h4>
 
-        <ProductCards products={products.slice(0, viewProducts)} />
+        <ProductCards products={products} />
 
         <div className="text-center">
           <Button

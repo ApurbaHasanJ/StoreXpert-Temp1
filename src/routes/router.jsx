@@ -22,15 +22,15 @@ export const router = createBrowserRouter([
       },
       {
         path: "/products/:id",
-        element: <ViewProduct/>
+        element: <ViewProduct />,
       },
       {
         path: "/checkout",
-        element: <Checkout/>
+        element: <Checkout />,
       },
       {
         path: "/cart",
-        element: <Cart/>
+        element: <Cart />,
       },
       {
         path: "/terms-and-conditions",
