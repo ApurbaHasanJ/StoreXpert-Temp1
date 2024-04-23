@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import products from "../../public/products.json"
 import { Button } from "./ui/button";
 import { FaCartPlus } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
@@ -6,16 +6,7 @@ import { Progress } from "./ui/progress";
 import fireImg from "/src/assets/icons/fire.png";
 
 const HotProduct = () => {
-  const [product, setProduct] = useState();
-
-  useEffect(() => {
-    fetch("/src/products.json")
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data);
-        setProduct(data[0]);
-      });
-  }, []);
+  const product = products[0]
 
   return (
     <section id="hot-product" className="py-5">

@@ -1,19 +1,13 @@
-import { useEffect, useState } from "react";
+import { useMemo, useState } from "react";
 import { Button } from "./ui/button";
+import products from "../../public/products.json";
 import ProductCards from "./shared/ProductCards";
-
 const AllProducts = () => {
-  const [products, setProducts] = useState([]);
   const [viewProducts, setViewProducts] = useState(15);
 
-  useEffect(() => {
-    fetch("/src/products.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setProducts(data);
-      });
-  }, []);
+  const displayedProducts = useMemo(() => {
+    return products && products.slice(0, viewProducts);
+  }, [viewProducts]);
 
   return (
     <section id="shop" className="pt-5">
@@ -22,8 +16,7 @@ const AllProducts = () => {
           All <span className="text-primary">Products</span>
         </h4>
 
-        <ProductCards products={products} />
-
+        <ProductCards products={displayedProducts} />
         <div className="text-center">
           <Button
             disabled={products.length <= viewProducts}

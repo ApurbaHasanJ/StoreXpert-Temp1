@@ -1,6 +1,6 @@
 import { SlHandbag } from "react-icons/sl";
 import { buttonVariants } from "../ui/button";
-import products from "/src/products.json";
+import products from "../../../public/products.json";
 import { Link } from "react-router-dom";
 import { FaSortDown } from "react-icons/fa6";
 import { BsSearch, BsTelephone } from "react-icons/bs";
