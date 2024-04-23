@@ -2,7 +2,7 @@ import { FaCartPlus } from "react-icons/fa6";
 import { buttonVariants } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/features/cart";
 
 const ProductCards = ({ products }) => {
