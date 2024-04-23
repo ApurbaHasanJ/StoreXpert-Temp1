@@ -1,8 +1,6 @@
 import CheckoutForm from "@/components/CheckoutForm";
 import Cart from "@/components/shared/Cart";
-import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
 
 const Checkout = () => {
   const [deliveryCharge, setDeliveryCharge] = useState(0);

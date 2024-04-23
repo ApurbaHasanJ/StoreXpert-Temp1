@@ -8,29 +8,22 @@ import NavItems from "./NavItems";
 import { useState } from "react";
 import Categories from "../Categories";
 import { cn } from "@/lib/utils";
-import useCarts from "../hooks/useCarts";
 import SearchResult from "./SearchResult";
 import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [query, setQuery] = useState("");
-  const { carts } = useCarts();
   const [showCategories, setShowCategories] = useState(false);
 
-  // const totalQuantity = carts.reduce(
-  //   (total, cartItem) => total + cartItem.quantity,
-  //   0
-  // );
   const selectedItem = useSelector((state) => state?.cart?.selectedItem);
 
+  // filtering searched products
   const searchedProduct = products?.filter((product) =>
     query.toLocaleLowerCase() === ""
       ? ""
       : product.inStock > 0 &&
         product.title?.toLocaleLowerCase().includes(query)
   );
-
-  console.log({ searchedProduct });
 
   return (
     <header className="relative">
@@ -67,7 +60,7 @@ const Navbar = () => {
 
       <div
         className={cn(
-          "container pt-5 bg-ghost rounded-b-lg shadow-md z-10 absolute top-[83px] right-0 left-0 min-h-[450px] max-h-[500px] h-full overflow-y-scroll",
+          "container pt-5 bg-ghost rounded-b-lg shadow-md z-10 absolute pb-4 top-[83px] right-0 left-0 min-h-[450px] max-h-[500px] h-full overflow-y-scroll",
           !query && "hidden",
           searchedProduct?.length && "grid md:grid-cols-2 grid-cols-1 gap-2"
         )}>

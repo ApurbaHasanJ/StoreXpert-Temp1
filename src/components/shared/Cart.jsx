@@ -42,8 +42,9 @@ const Cart = ({ deliveryCharge }) => {
   // });
 
   const products = useSelector((state) => state?.cart?.products);
-  const totalPrice = useSelector((state) => state?.cart?.totalPrice);
+  const subTotal = useSelector((state) => state?.cart?.subTotal);
   const dispatch = useDispatch();
+  console.log(subTotal);
 
   const handleIncreaseQuantity = (id) => {
     dispatch(increaseQuantity(id));
@@ -158,7 +159,7 @@ const Cart = ({ deliveryCharge }) => {
                 <TableBody>
                   <TableRow>
                     <TableCell>Subtotal</TableCell>
-                    <TableCell className="border-l">Tk. {totalPrice}</TableCell>
+                    <TableCell className="border-l">Tk. {subTotal}</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>Delivery Charge (+)</TableCell>
@@ -169,7 +170,7 @@ const Cart = ({ deliveryCharge }) => {
                   <TableRow className="font-bold text-xl">
                     <TableCell>Total</TableCell>
                     <TableCell className="border-l">
-                      {/* Tk. {subTotal + (deliveryCharge ? deliveryCharge : 0)} */}
+                      Tk. {subTotal + (deliveryCharge ? deliveryCharge : 0)}
                     </TableCell>
                   </TableRow>
                 </TableBody>
