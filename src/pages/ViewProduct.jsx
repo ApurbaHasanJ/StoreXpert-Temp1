@@ -14,9 +14,9 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import RelatedProducts from "@/components/shared/RelatedProducts";
-import products from "/src/products.json";
+import products from "../../public/products.json";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/features/cart";
 
 const ViewProduct = () => {

@@ -1,21 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
+import products from "../../public/products.json";
 import { Button } from "./ui/button";
 import ProductCards from "./shared/ProductCards";
 
 const FlashSale = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    fetch("/src/products.json")
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log({data});
-        setProducts(data);
-      });
-  }, []);
-
   // Memoize the products array to prevent unnecessary re-renders
-  const memoizedProducts = useMemo(() => products.slice(0, 5), [products]);
+  const memoizedProducts = useMemo(() => products.slice(0, 5), []);
 
   return (
     <section id="flash-sale" className="pt-5">
