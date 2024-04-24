@@ -1,7 +1,11 @@
 import { IoCallOutline } from "react-icons/io5";
+import { AiOutlineMail } from "react-icons/ai";
+import { IoLocationOutline } from "react-icons/io5";
 import whatsAppImg from "/src/assets/icons/whatsapp.png";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import facebookImg from "/src/assets/icons/facebook.png";
+import { Button } from "../ui/button";
 
 const links = [
   { title: "Terms & Conditions", url: "/terms-and-conditions" },
@@ -16,42 +20,31 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   const handleCallClick = () => {
-    // Replace '1234567890' with the actual phone number you want to call
     const phoneNumber = "+8801884167824";
-
     // Create a tel URL with the phone number
     const telUrl = `tel:${phoneNumber}`;
-
     // Open the phone app with the provided phone number
     window.location.href = telUrl;
   };
 
   return (
     <footer>
-      <div className="text-4xl font-bold bg-white container">
+      <div className="bg-white pt-8 container">
         <div
-          className={cn(
-            "flex items-center max-md:flex-col justify-center md:gap-10 gap-5 py-10",
-            location?.pathname === "/"
-              ? "bg-white"
-              : "bg-ghost w-full rounded-xl my-8"
-          )}>
-          <div onClick={handleCallClick} className="flex items-center gap-3">
-            <IoCallOutline className="text-primary" /> Call Us
-          </div>
-          <a
-            href="https://wa.me/+8801886084422?text=Hello! I Need Fashion Advice and Assistance."
-            target="_blank"
-            rel="noopener noreferrer">
-            <div className="flex items-center gap-3">
-              <img className="w-9" src={whatsAppImg} alt="" /> Chat on WhatsApp
+          className="flex items-center justify-between max-sm:flex-col -mb-14 px-6 drop-shadow-md bg-ghost rounded-2xl md:w-2/3 mx-auto md:gap-10 gap-5 py-10">
+          <div className="flex items-center gap-3">
+            <img src={facebookImg} className="w-12" alt="" />
+            <div>
+              <p className="font-medium">Visit Our Facebook</p>
+              <p>To get update about our latest update</p>
             </div>
-          </a>
+          </div>
+          <Button variant="outline">Visit Now</Button>
         </div>
       </div>
 
-      <div className=" bg-ghost">
-        <div className="container py-10 font-medium flex max-md:flex-col justify-between lg:gap-20 gap-10">
+      <div className="z-0 bg-ghost">
+        <div className="container py-10 pt-20 font-medium flex max-md:flex-col justify-between lg:gap-20 gap-10">
           {/* col 1 */}
           <div className="md:w-4/12">
             <h3 className="text-primary">WoWnex</h3>
@@ -61,6 +54,12 @@ const Footer = () => {
               distinctio quis voluptas impedit, illo id, asperiores fugiat et
               tenetur ex nostrum neque.
             </p>
+            <a
+              href="https://wa.me/+8801886084422?text=Hello! I Need Fashion Advice and Assistance."
+              target="_blank"
+              rel="noopener noreferrer">
+              <img className="h-16 mt-3" src={whatsAppImg} alt="" />
+            </a>
           </div>
 
           {/* col 2 */}
@@ -78,13 +77,22 @@ const Footer = () => {
           {/* col 3 */}
           <div className="md:w-3/12">
             <h5>Contact Us</h5>
-            <div className="mt-7">
+            <div className="mt-7 grid grid-cols-1 gap-1">
               <p>Call us 10am-11pm (Everyday)</p>
-              <p className="font-semibold">+8801710-696950</p>
-              <p className="font-semibold">info@wownex.com</p>
-              <p>
-                G3, Ground Floor, House# 307, Elephant Road, Pubali Bank
-                Building, Dhaka-1205.
+              <p onClick={handleCallClick} className="flex items-center gap-2">
+                <IoCallOutline className="text-primary" />
+                <span>+8801710-696950</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <AiOutlineMail className="text-primary" />
+                <span>info@wownex.com</span>
+              </p>
+              <p className="flex gap-2">
+                <IoLocationOutline className="text-primary text-2xl md:w-9" />
+                <span>
+                  G3, Ground Floor, House# 307, Elephant Road, Pubali Bank
+                  Building, Dhaka-1205.
+                </span>
               </p>
             </div>
           </div>

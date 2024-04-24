@@ -43,7 +43,7 @@ const Navbar = () => {
             onClick={() => setQuery("")}
             className={cn(
               buttonVariants(),
-              "md:px-8 bg-primary px-6 md:text-lg text-xs rounded-l-none rounded-r-3xl"
+              "md:px-8 bg-primary px-4 md:text-lg text-xs rounded-l-none rounded-r-3xl"
             )}>
             <BsSearch className="md:hidden text-white text-sm" />
             <span className="max-lg:hidden">Search</span>

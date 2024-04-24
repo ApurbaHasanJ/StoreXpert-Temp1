@@ -37,13 +37,22 @@ const ViewProduct = () => {
     dispatch(addToCart(product));
   };
 
+  // direct call
+  const handleCallClick = () => {
+    const phoneNumber = "+8801884167824";
+    // Create a tel URL with the phone number
+    const telUrl = `tel:${phoneNumber}`;
+    // Open the phone app with the provided phone number
+    window.location.href = telUrl;
+  };
+
   return (
-    <section className="container mt-8 mb-16">
+    <section className="container mt-8 my-8">
       <div className="flex max-md:flex-col items-start gap-6 mb-16">
-        <div className="max-w-md w-full">
+        <div className="max-w-[440px] max-h-[440px] h-full w-full">
           <div className=" bg-ghost border relative rounded-xl overflow-hidden">
             <img
-              className="max-w-md w-full h-full aspect-square"
+              className="max-w-[440px] max-h-[440px] h-full w-full h-full aspect-square"
               src={viewImg}
               alt={product?.title}
             />
@@ -87,7 +96,7 @@ const ViewProduct = () => {
               {product?.inStock ? "In Stock" : "Sold Out"}
             </p>
           </div>
-          <div className="flex max-lg:flex-col justify-between gap-8">
+          <div className="flex max-lg:flex-col justify-between lg:gap-8 gap-14">
             <div className="w-full">
               <div className="flex items-baseline gap-3 mb-4 mt-8">
                 <span className="text-primary font-bold md:text-3xl text-xl">
@@ -107,10 +116,9 @@ const ViewProduct = () => {
               <Link
                 to="/checkout"
                 onClick={() => handleAddToCart(product)}
-                size="lg"
                 className={cn(
-                  buttonVariants(),
-                  "w-full text-xl py-2 mt-7 rounded-full"
+                  buttonVariants({ size: "lg" }),
+                  "w-full text-xl py-[10px] mt-7 rounded-full"
                 )}>
                 Order Now
               </Link>
@@ -122,18 +130,25 @@ const ViewProduct = () => {
                 <FaCartPlus /> <span>Add to Cart</span>
               </Button>
 
-              <div className="mt-14 px-7 py-3 text-center border-2 border-secondary/40 border-dashed text-secondary/80 rounded-lg">
+              <div
+                onClick={handleCallClick}
+                className="mt-14 px-7 py-3 text-center border-2 border-secondary/40 border-dashed text-secondary/80 rounded-lg">
                 <p>এই পণ্য সম্পর্কে জানতে আমাদের কল করুনঃ</p>
                 <div className="flex items-center justify-center gap-2 text-3xl">
                   <IoCallOutline /> <span>01710-696950</span>
                 </div>
               </div>
-              <div className="mt-5 px-7 py-3 text-center border-2 border-secondary/40 border-dashed text-secondary/80 rounded-lg">
-                <p>WhatsApp করুনঃ</p>
-                <div className="flex items-center justify-center gap-2 text-3xl">
-                  <BsWhatsapp /> <span>01710-696950</span>
+              <a
+                href="https://wa.me/+8801886084422?text=Hello! I Need Fashion Advice and Assistance."
+                target="_blank"
+                rel="noopener noreferrer">
+                <div className="mt-5 px-7 py-3 text-center border-2 border-secondary/40 border-dashed text-secondary/80 rounded-lg">
+                  <p>WhatsApp করুনঃ</p>
+                  <div className="flex items-center justify-center gap-2 text-3xl">
+                    <BsWhatsapp /> <span>01710-696950</span>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
             <ServiceDesc />
           </div>

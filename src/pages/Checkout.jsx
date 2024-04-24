@@ -11,7 +11,7 @@ const Checkout = () => {
 
   return (
     <section className="bg-ghost  py-10">
-      <div className="container flex max-lg:flex-col-reverse gap-5">
+      <div className="container flex max-lg:flex-col gap-5">
         <div className="bg-white shadow-md rounded-xl p-5 lg:w-1/2 h-fit">
           <p className="text-center md:text-xl text-lg font-medium mb-10">
             অর্ডারটি কনফার্ম করতে আপনার নাম, ঠিকানা, মোবাইল নাম্বার লিখে &apos;

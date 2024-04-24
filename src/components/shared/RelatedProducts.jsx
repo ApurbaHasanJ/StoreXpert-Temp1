@@ -1,30 +1,23 @@
 import { useEffect, useMemo, useState } from "react";
 import ProductCards from "./ProductCards";
 import { Button } from "../ui/button";
+import products from "../../../public/products.json";
 
 const RelatedProducts = ({ category }) => {
-  const [products, setProducts] = useState([]);
+  const [relatedProducts, setRelatedProducts] = useState([]);
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    fetch("/src/products.json")
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log({data});
-        const filteredProduct = data.filter(
-          (product) => product.category == category
-        );
-        setProducts(filteredProduct);
-      });
+    const filteredProduct = products.filter(
+      (product) => product?.category == category
+    );
+    setRelatedProducts(filteredProduct);
   }, [category]);
 
   // Memoize the sliced array of products based on the showAll state
   const displayedProducts = useMemo(() => {
-    return showAll ? products : products.slice(0, 5);
-  }, [showAll, products]);
-
-  // console.log(showAll);
-  // console.log(displayedProducts);
+    return showAll ? relatedProducts : relatedProducts.slice(0, 5);
+  }, [relatedProducts, showAll]);
 
   return (
     <section className="bg-ghost/50 rounded-lg shadow mt-10 p-4">
