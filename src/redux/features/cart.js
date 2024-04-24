@@ -36,6 +36,9 @@ export const cartSlice = createSlice({
         (item) => item?._id !== action?.payload
       );
 
+      // Decrease selectedItem when a new item is added
+      state.selectedItem -= 1;
+
       // Recalculate total price
       state.subTotal = calculateSubTotal(state);
     },

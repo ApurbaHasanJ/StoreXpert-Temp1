@@ -5,28 +5,27 @@ import { RiCustomerService2Line } from "react-icons/ri";
 
 const ServiceDesc = () => {
   return (
-    <div className="bg-ghost/80 p-3 text-sm rounded-lg border-2 drop-shadow-sm lg:max-w-72 w-full grid lg:grid-cols-1 grid-cols-2 lg:gap-2 gap-8 justify-between">
-      
+    <div className="bg-ghost/80 p-5 text-sm rounded-lg border-2 drop-shadow-sm lg:max-w-72 w-full grid grid-cols-1 lg:gap-2 gap-8 justify-between">
         <div className="text-blue-800 flex gap-2 items-start w-full">
-          <GoRocket className="text-xl mt-1" />{" "}
+          <GoRocket className="text-2xl mt-1 text-primary" />{" "}
           <div className="w-full">
             <p className="border-b-2 text-base border-gray-300 pb-1">
               ডেলিভারি খরচঃ
             </p>
             <ul className="text-secondary/80 py-4">
-              <li className="flex gap-2 justify-between">
-                <p>ঢাকা শহরের ভিতরে</p>
+              <li className="flex gap-4 ">
+                <p>ঢাকা শহরের ভিতরে:</p>
                 <span>৬০ টাকা</span>
               </li>
-              <li className="flex mt-2 gap-2 justify-between">
-                <p>ঢাকা শহরের বাইরে</p>
+              <li className="flex mt-2 gap-4 ">
+                <p>ঢাকা শহরের বাইরে:</p>
                 <span>১৫০ টাকা</span>
               </li>
             </ul>
           </div>
         </div>
         <div className="text-blue-800 flex gap-2 items-start">
-          <PiKeyReturn className="text-3xl -mt-1" />{" "}
+          <PiKeyReturn className="md:text-3xl text-2xl md:-mt-1 text-primary" />{" "}
           <div>
             <p className="border-b-2 text-base border-gray-300 pb-1">
               রিটার্নঃ
@@ -41,7 +40,7 @@ const ServiceDesc = () => {
           </div>
         </div>
         <div className="text-blue-800 flex gap-2 items-start">
-          <BsTruck className="text-3xl -mt-1" />{" "}
+          <BsTruck className="md:text-3xl text-2xl md:-mt-1 text-primary" />{" "}
           <div>
             <p className="border-b-2 text-base border-gray-300 pb-1">
               পণ্য হাতে পেয়ে পেমেন্টঃ
@@ -52,7 +51,7 @@ const ServiceDesc = () => {
           </div>
         </div>
         <div className="text-blue-800 flex gap-2 items-start">
-          <RiCustomerService2Line className="text-5xl -mt-3" />{" "}
+          <RiCustomerService2Line className="md:text-5xl text-4xl md:-mt-3 -mt-1 text-primary" />{" "}
           <div>
             <p className="border-b-2 text-base border-gray-300 pb-1">
               কাস্টমার সার্ভিসঃ

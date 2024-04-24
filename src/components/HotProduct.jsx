@@ -18,14 +18,14 @@ const HotProduct = () => {
           </h4>
         </div>
         {/* card content */}
-        <div className="pb-4 flex max-md:flex-col md:items-center gap-3">
+        <div className="pb-4 flex max-md:flex-col md:items-center gap-6">
           <div className="max-w-xs aspect-square bg-ghost border relative w-full overflow-hidden rounded-xl">
             <img
               className="scale-100 hover:scale-105 duration-300"
               src={product?.images[0]}
               alt={product?.title}
             />
-            <div className="absolute top-0 left-0 font-bold bg-primary text-ghost md:text-2xl text-lg p-3 rounded-full rounded-tl-none">
+            <div className="absolute top-0 left-0 font-bold bg-primary text-ghost md:text-2xl text-lg p-4 rounded-full rounded-tl-none">
               <span>{product?.disc}%</span>
             </div>
           </div>

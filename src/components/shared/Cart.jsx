@@ -33,13 +33,6 @@ export const Stars = () => {
 
 const Cart = ({ deliveryCharge }) => {
   const location = useLocation();
-  // const { carts, handleAddCart, handleRemoveCart } = useCarts();
-
-  // // getting carts from products list
-  // const cartItems = carts?.map((cart) => {
-  //   const product = products?.find((product) => product?._id === cart._id);
-  //   return { ...product, quantity: cart.quantity };
-  // });
 
   const products = useSelector((state) => state?.cart?.products);
   const subTotal = useSelector((state) => state?.cart?.subTotal);
@@ -58,18 +51,6 @@ const Cart = ({ deliveryCharge }) => {
     dispatch(removeFromCart(id));
   };
 
-  // calculating subtotal
-  // const subTotal = cartItems.reduce(
-  //   (acc, item) =>
-  //     acc +
-  //     item.quantity *
-  //       (item.disc
-  //         ? Math.floor(((100 - item.disc) / 100) * item.price)
-  //         : item.price),
-  //   0
-  // );
-
-  // console.log(subTotal);
   return (
     <section
       className={location?.pathname === "/cart" ? "mt-8 mb-16 container" : ""}>

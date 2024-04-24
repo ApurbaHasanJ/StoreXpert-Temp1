@@ -1,88 +1,69 @@
 import { SlHandbag } from "react-icons/sl";
-import { buttonVariants } from "../ui/button";
-import products from "../../../public/products.json";
 import { Link } from "react-router-dom";
 import { FaSortDown } from "react-icons/fa6";
-import { BsSearch, BsTelephone } from "react-icons/bs";
+import { BsTelephone } from "react-icons/bs";
 import NavItems from "./NavItems";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Categories from "../Categories";
 import { cn } from "@/lib/utils";
-import SearchResult from "./SearchResult";
 import { useSelector } from "react-redux";
+import Search from "./Search";
 
 const Navbar = () => {
-  const [query, setQuery] = useState("");
   const [showCategories, setShowCategories] = useState(false);
+  const [scroll, setScroll] = useState(false);
 
+  // cart quantity
   const selectedItem = useSelector((state) => state?.cart?.selectedItem);
 
-  // filtering searched products
-  const searchedProduct = products?.filter((product) =>
-    query.toLocaleLowerCase() === ""
-      ? ""
-      : product.inStock > 0 &&
-        product.title?.toLocaleLowerCase().includes(query)
-  );
+  // Add an event listener to track scroll events
+  useEffect(() => {
+    const handleScroll = () => {
+      // Get the current scroll position
+      const scrollY = window.scrollY || window.pageYOffset;
+
+      if (scrollY > 200) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header className="relative">
-      <div className="container flex items-center justify-between gap-10 py-5">
-        <h4 className="text-primary">WoWnex</h4>
-        <form className="max-w-2xl w-full md:border-2 border border-primary rounded-3xl flex items-center pl-2">
-          <input
-            type="search"
-            className="focus:outline-none w-full pl-3"
-            name=""
-            id=""
-            onChange={(e) => setQuery(e.target.value.toLocaleLowerCase())}
-            placeholder="Search product here"
-          />
-          <Link
-            to={`/products/${searchedProduct[0]?._id}`}
-            onClick={() => setQuery("")}
-            className={cn(
-              buttonVariants(),
-              "md:px-8 bg-primary px-6 md:text-lg text-xs rounded-l-none rounded-r-3xl"
-            )}>
-            <BsSearch className="md:hidden text-white text-sm" />
-            <span className="max-lg:hidden">Search</span>
-          </Link>
-        </form>
-        {/* cart */}
-        <Link to="/cart" className="relative">
-          <SlHandbag className="text-secondary md:text-3xl text-2xl" />
-          <span className="bg-primary text-sm rounded-full h-5 w-5 text-center text-white absolute -right-2 -bottom-2">
-            {selectedItem}
-          </span>
-        </Link>
-      </div>
-
       <div
         className={cn(
-          "container pt-5 bg-ghost rounded-b-lg shadow-md z-10 absolute pb-4 top-[83px] right-0 left-0 min-h-[450px] max-h-[500px] h-full overflow-y-scroll",
-          !query && "hidden",
-          searchedProduct?.length && "grid md:grid-cols-2 grid-cols-1 gap-2"
+          "left-0 right-0 top-0 bg-white z-10 shadow-sm duration-500 transition-all ease-in-out",
+          scroll ? "fixed" : "sticky"
         )}>
-        {searchedProduct.length ? (
-          searchedProduct?.map((product) => (
-            <Link
-              key={product?._id}
-              to={`/products/${product?._id}`}
-              onClick={() => setQuery("")}
-              className="flex items-center md:gap-6 gap-3 h-fit hover:bg-primary/10 rounded-md p-2">
-              <SearchResult product={product} />
-            </Link>
-          ))
-        ) : (
-          <p className="text-center mt-10 text-primary font-medium">
-            No products found
-          </p>
-        )}
+        <div className="container flex items-center justify-between gap-10 py-5">
+          <h4 className="text-primary">WoWnex</h4>
+          <div className="max-md:hidden max-w-2xl w-full">
+            <Search />
+          </div>
+          {/* cart */}
+          <Link to="/cart" className="relative">
+            <SlHandbag className="text-secondary md:text-3xl text-2xl" />
+            <span className="bg-primary text-sm rounded-full h-5 w-5 text-center text-white absolute -right-2 -bottom-2">
+              {selectedItem}
+            </span>
+          </Link>
+        </div>
+        <div className="md:hidden container z-10 pb-3">
+          <Search />
+        </div>
       </div>
 
       {/* 2nd column */}
-      <div className="bg-primary text-white py-3">
+      <div className="bg-primary text-white py-3 max-md:hidden">
         <div className="container w-full flex items-center gap-5 justify-between">
           <div
             onClick={() => setShowCategories(!showCategories)}

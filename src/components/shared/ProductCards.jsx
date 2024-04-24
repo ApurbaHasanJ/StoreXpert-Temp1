@@ -25,7 +25,7 @@ const ProductCards = ({ products }) => {
               />
               <span
                 className={cn(
-                  "bg-primary border border-ghost/80 text-ghost absolute top-0 left-0 rounded-br-xl px-2 font-medium text-sm",
+                  "bg-primary text-ghost absolute top-0 left-0 rounded-br-xl px-2 font-medium text-sm",
                   product?.disc ? "block" : "hidden"
                 )}>
                 {product?.disc}&#37;
@@ -40,7 +40,7 @@ const ProductCards = ({ products }) => {
           </Link>
           <div className="flex items-baseline gap-3 mb-3">
             <span className="text-primary font-bold md:text-2xl text-lg">
-              <span className="text-4xl">৳</span>{" "}
+              <span className="md:text-4xl text-xl">৳</span>{" "}
               {product?.disc
                 ? Math.floor(((100 - product?.disc) / 100) * product?.price)
                 : product?.price}
