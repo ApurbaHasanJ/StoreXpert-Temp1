@@ -28,7 +28,7 @@ const benefits = [
 
 const WhyUs = () => {
   return (
-    <section className="bg-primary/20 rounded-lg mt-5 px-4 py-3 flex flex-wrap items-center justify-between gap-4">
+    <section className="bg-primary/10 rounded-lg mt-5 px-4 py-3 flex flex-wrap items-center justify-between gap-4">
       {benefits?.map((benefit) => (
         <div key={benefit?._id} className="flex items-center gap-4">
           <img className="w-10 h-10" src={benefit?.img} alt="" />

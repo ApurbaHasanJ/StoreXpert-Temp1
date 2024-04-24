@@ -11,12 +11,17 @@ const Home = () => {
     <div className="bg-ghost py-5">
       <div className="container">
         <Hero />
+        <div className="max-sm:hidden">
         <WhyUs />
+        </div>
         <FlashSale/>
         <HotProduct/>
         <NewArrivals/>
         <AdvertiseCards/>
         <AllProducts/>
+        <div className="sm:hidden">
+        <WhyUs />
+        </div>
       </div>
     </div>
   );
