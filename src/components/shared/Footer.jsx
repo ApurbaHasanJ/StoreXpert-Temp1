@@ -2,8 +2,8 @@ import { IoCallOutline } from "react-icons/io5";
 import { AiOutlineMail } from "react-icons/ai";
 import { IoLocationOutline } from "react-icons/io5";
 import whatsAppImg from "/src/assets/icons/whatsapp.png";
-import { Link, useLocation } from "react-router-dom";
-import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
+
 import facebookImg from "/src/assets/icons/facebook.png";
 import { Button } from "../ui/button";
 
@@ -16,7 +16,6 @@ const links = [
   { title: "Shipping or Delivery", url: "/shipping-or-delivery" },
 ];
 const Footer = () => {
-  const location = useLocation();
   const year = new Date().getFullYear();
 
   const handleCallClick = () => {
@@ -30,8 +29,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="bg-white pt-8 container">
-        <div
-          className="flex items-center justify-between max-sm:flex-col -mb-14 px-6 drop-shadow-md bg-ghost rounded-2xl md:w-2/3 mx-auto md:gap-10 gap-5 py-10">
+        <div className="flex items-center justify-between max-sm:flex-col -mb-14 px-6 drop-shadow-md bg-ghost rounded-2xl md:w-2/3 mx-auto md:gap-10 gap-5 py-10">
           <div className="flex items-center gap-3">
             <img src={facebookImg} className="w-12" alt="" />
             <div>
