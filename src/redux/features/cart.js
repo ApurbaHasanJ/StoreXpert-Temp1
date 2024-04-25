@@ -41,7 +41,7 @@ export const cartSlice = createSlice({
         (item) => item._id !== action.payload
       );
       state.selectedItem -= 1; // Decrement the count of unique items
-      toast.success("tem removed from cart successfully"); // Show success message
+      toast.success("Item removed from cart successfully"); // Show success message
 
       // Recalculate the subtotal after removal
       state.subTotal = calculateSubTotal(state);
