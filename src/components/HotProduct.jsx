@@ -1,4 +1,4 @@
-import products from "../../public/products.json"
+import products from "../../public/products.json";
 import { Button } from "./ui/button";
 import { FaCartPlus } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
@@ -6,7 +6,7 @@ import { Progress } from "./ui/progress";
 import fireImg from "/src/assets/icons/fire.png";
 
 const HotProduct = () => {
-  const product = products[0]
+  const product = products[0];
 
   return (
     <section id="hot-product" className="py-5">
@@ -57,9 +57,7 @@ const HotProduct = () => {
                 {product?.inStock ? "In Stock" : "Sold Out"}
               </p>
             </div>
-
             <Progress value={product?.inStock} />
-
             <div className="flex max-md:flex-col md:items-center gap-4 my-4">
               <div className="flex items-center gap-1 text-lg font-semibold">
                 <span className="bg-ghost p-1 px-2">12</span>:
