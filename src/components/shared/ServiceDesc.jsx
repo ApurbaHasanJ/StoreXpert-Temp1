@@ -6,7 +6,7 @@ import { RiCustomerService2Line } from "react-icons/ri";
 const ServiceDesc = () => {
   return (
     <div className="bg-ghost/80 p-5 text-sm rounded-lg border-2 drop-shadow-sm lg:max-w-72 w-full grid grid-cols-1 lg:gap-2 gap-8 justify-between">
-      <div className="text-blue-800 flex gap-2 items-start w-full">
+      <div className="flex gap-2 items-start w-full">
         <GoRocket className="text-2xl mt-1 text-primary" />{" "}
         <div className="w-full">
           <p className="border-b-2 text-base border-gray-300 pb-1">
@@ -24,9 +24,9 @@ const ServiceDesc = () => {
           </ul>
         </div>
       </div>
-      <div className="text-blue-800 flex gap-2 items-start">
-        <PiKeyReturn className="md:text-3xl text-2xl md:-mt-1 text-primary" />{" "}
-        <div>
+      <div className="flex gap-2 items-start">
+        <PiKeyReturn className="md:text-3xl text-2xl text-primary" />{" "}
+        <div className="w-full">
           <p className="border-b-2 text-base border-gray-300 pb-1">রিটার্নঃ</p>
           <p className="text-secondary/80 py-2">
             ৭ দিনের মধ্যে ফ্রি রিটার্ন (
@@ -35,9 +35,9 @@ const ServiceDesc = () => {
           </p>
         </div>
       </div>
-      <div className="text-blue-800 flex gap-2 items-start">
+      <div className="flex gap-2 items-start">
         <BsTruck className="md:text-3xl text-2xl md:-mt-1 text-primary" />{" "}
-        <div>
+        <div className="w-full">
           <p className="border-b-2 text-base border-gray-300 pb-1">
             পণ্য হাতে পেয়ে পেমেন্টঃ
           </p>
@@ -46,9 +46,9 @@ const ServiceDesc = () => {
           </p>
         </div>
       </div>
-      <div className="text-blue-800 flex gap-2 items-start">
-        <RiCustomerService2Line className="md:text-5xl sm:text-2xl text-4xl md:-mt-3 -mt-1 text-primary" />{" "}
-        <div>
+      <div className="flex gap-2 items-start">
+        <RiCustomerService2Line className="md:text-3xl text-2xl text-primary" />{" "}
+        <div className="w-full">
           <p className="border-b-2 text-base border-gray-300 pb-1">
             কাস্টমার সার্ভিসঃ
           </p>

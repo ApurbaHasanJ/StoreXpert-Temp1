@@ -39,6 +39,10 @@
   clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
 }
 
+.phone-nav-round{
+  border-radius: 35px 35px 0 0;
+}
+
 /* scroll bar */
 ::-webkit-scrollbar {
   width: 8px;

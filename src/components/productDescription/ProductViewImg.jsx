@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const ProductViewImg = ({ setViewImg, viewImg, product }) => {
   return (
-    <div className="max-w-[430px] md:max-h-[430px] md:h-full h-fit w-full">
+    <div className="max-w-[430px] md:max-h-[430px] md:h-full h-fit w-full mx-auto">
       {/* display selected img */}
       <div className=" bg-ghost border relative rounded-xl overflow-hidden">
         <img

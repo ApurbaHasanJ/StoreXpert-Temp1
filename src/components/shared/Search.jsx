@@ -6,7 +6,7 @@ import { BsSearch } from "react-icons/bs";
 import { cn } from "@/lib/utils";
 import SearchResult from "./SearchResult";
 
-const Search = ({scroll}) => {
+const Search = ({ scroll }) => {
   const [query, setQuery] = useState("");
 
   // filtering searched products
@@ -29,7 +29,7 @@ const Search = ({scroll}) => {
           placeholder="Search product here"
         />
         <Link
-          to={`/products/${searchedProduct[0]?._id}`}
+          to={query ? `/products/${searchedProduct[0]?._id}` : "#"}
           onClick={() => setQuery("")}
           className={cn(
             buttonVariants(),
@@ -44,7 +44,8 @@ const Search = ({scroll}) => {
           "container pt-5 bg-ghost rounded-b-lg shadow-md z-10 absolute pb-4 md:top-[83px] right-0 left-0 min-h-[450px] max-h-[500px] h-full overflow-y-scroll",
           scroll ? "top-[65.5px]" : "top-14",
           !query && "hidden",
-          searchedProduct?.length && "grid md:grid-cols-2 grid-cols-1 gap-2 content-start"
+          searchedProduct?.length &&
+            "grid md:grid-cols-2 grid-cols-1 gap-2 content-start"
         )}>
         {searchedProduct.length ? (
           searchedProduct?.map((product) => (

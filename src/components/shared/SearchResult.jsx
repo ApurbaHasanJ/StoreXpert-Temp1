@@ -3,9 +3,13 @@ import { cn } from "@/lib/utils";
 const SearchResult = ({ product }) => {
   return (
     <>
-      <img className="w-20 h-20 aspect-square rounded-md" src={product?.images[0]} alt={product?.title} />
+      <img
+        className="w-20 h-20 aspect-square rounded-md"
+        src={product?.images[0]}
+        alt={product?.title}
+      />
       <div>
-        <p className="my-2  duration-300  font-mono">
+        <p className="my-2 capitalize">
           {product?.title.length > 40
             ? product?.title.substring(0, 40) + "..."
             : product?.title}

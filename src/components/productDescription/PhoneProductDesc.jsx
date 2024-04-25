@@ -8,7 +8,7 @@ import {
 const PhoneProductDesc = ({ product }) => {
   return (
     <section className="sm:hidden">
-      <Accordion type="single" collapsible className="grid grid-cols-1 gap-2">
+      <Accordion defaultValue="product-details" type="single" collapsible className="grid grid-cols-1 gap-2">
         {/* Product Details */}
         <AccordionItem value="product-details">
           <AccordionTrigger>Product Details</AccordionTrigger>
