@@ -34,7 +34,7 @@ export const Stars = () => {
 const Cart = ({ deliveryCharge }) => {
   const location = useLocation();
 
-  const products = useSelector((state) => state?.cart?.products);
+  const carts = useSelector((state) => state?.cart?.products);
   const subTotal = useSelector((state) => state?.cart?.subTotal);
   const dispatch = useDispatch();
   // console.log(subTotal);
@@ -53,6 +53,8 @@ const Cart = ({ deliveryCharge }) => {
     dispatch(removeFromCart(id));
   };
 
+  console.log({ carts });
+
   return (
     <section
       className={location?.pathname === "/cart" ? "mt-8 mb-16 container" : ""}>
@@ -62,7 +64,6 @@ const Cart = ({ deliveryCharge }) => {
         </p>
         {
           <>
-            {" "}
             <div className="mt-5 border border-secondary/30 rounded-lg">
               <Table className="">
                 <TableHeader>
@@ -75,8 +76,8 @@ const Cart = ({ deliveryCharge }) => {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {products.length ? (
-                    products?.map((cart, i) => (
+                  {carts.length ? (
+                    carts?.map((cart, i) => (
                       <TableRow key={i}>
                         <TableCell className="font-medium flex items-center gap-3">
                           <div>
@@ -165,7 +166,7 @@ const Cart = ({ deliveryCharge }) => {
                 location?.pathname === "/checkout" && "hidden"
               )}>
               <Link
-                to="/checkout"
+                to={!carts?.length ? "#" : "/checkout"}
                 type="button"
                 className={cn(
                   buttonVariants(),

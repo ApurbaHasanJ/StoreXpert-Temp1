@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 
-const CheckoutForm = ({ deliveryCharge, setDeliveryCharge }) => {
+const CheckoutForm = ({ setDeliveryCharge }) => {
   const {
     register,
     handleSubmit,
@@ -105,7 +104,7 @@ const CheckoutForm = ({ deliveryCharge, setDeliveryCharge }) => {
               id="deliveryAreaWithinDhaka"
               name="deliveryArea"
               value="withinDhaka"
-              className="mr-2 border  border-secondary/40 drop-shadow-sm rounded-md"
+              className="mr-2 border accent-primary border-secondary/40 drop-shadow-sm rounded-md"
               {...register("deliveryArea", {
                 required: "দয়া করে ডেলিভারি এলাকা নির্বাচন করুন",
               })}
@@ -123,7 +122,7 @@ const CheckoutForm = ({ deliveryCharge, setDeliveryCharge }) => {
               id="deliveryAreaOutsideDhaka"
               name="deliveryArea"
               value="outsideDhaka"
-              className="mr-2 border border-secondary/40 drop-shadow-sm rounded-md"
+              className="mr-2 border accent-primary border-secondary/40 drop-shadow-sm rounded-md"
               {...register("deliveryArea", {
                 required: "দয়া করে ডেলিভারি এলাকা নির্বাচন করুন",
               })}

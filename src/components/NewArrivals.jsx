@@ -29,6 +29,7 @@ const NewArrivals = () => {
           View All
         </Button>
       </div>
+
       <ProductCards products={displayedProducts} />
     </section>
   );

@@ -45,7 +45,7 @@ const ProductDetails = ({ product }) => {
           <div className="flex items-center justify-between gap-3 my-5">
             <div className="flex items-baseline gap-3">
               <span className="text-primary font-bold md:text-3xl text-xl">
-                <span className="text-3xl">৳</span>{" "}
+                <span className="md:text-xl text-base font-extrabold">৳</span>{" "}
                 {product?.disc
                   ? Math.floor(product.price * (1 - product.disc / 100))
                   : product?.price}

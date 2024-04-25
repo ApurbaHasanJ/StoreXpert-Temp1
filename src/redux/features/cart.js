@@ -24,7 +24,7 @@ export const cartSlice = createSlice({
       if (!isExist) {
         state.products?.push({ ...action.payload, quantity: 1 });
         state.selectedItem += 1; // Increment the count of unique items
-        toast.success("Item added successfully"); // Show success message
+        toast.success("Item added to cart successfully"); // Show success message
       } else {
         // If the item already exists, notify the user
         toast.error("Item already in cart");
@@ -41,7 +41,7 @@ export const cartSlice = createSlice({
         (item) => item._id !== action.payload
       );
       state.selectedItem -= 1; // Decrement the count of unique items
-      toast.success("Item removed successfully"); // Show success message
+      toast.success("tem removed from cart successfully"); // Show success message
 
       // Recalculate the subtotal after removal
       state.subTotal = calculateSubTotal(state);

@@ -56,11 +56,7 @@ const Navbar = () => {
             </span>
           </Link>
         </div>
-        <div
-          className={cn(
-            "md:hidden relative bg-white container z-10 pb-3 transition-all ease-in-out",
-            scroll && "fixed duration-500 py-3 left-0 right-0 top-0"
-          )}>
+        <div className="md:hidden relative bg-white container z-10 pb-3 transition-all ease-in-out">
           <Search scroll={scroll} />
         </div>
       </div>

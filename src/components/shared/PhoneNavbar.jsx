@@ -7,9 +7,13 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Categories from "../Categories";
 import { cn } from "@/lib/utils";
+import { useSelector } from "react-redux";
 
 const PhoneNavbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+
+  // cart quantity
+  const selectedItem = useSelector((state) => state?.cart?.selectedItem);
 
   // direct call
   const handleCallClick = () => {
@@ -22,7 +26,7 @@ const PhoneNavbar = () => {
 
   return (
     <>
-      <section className="md:hidden sticky bottom-0 left-0 right-0 z-20 bg-primary py-4 px-5">
+      <section className="md:hidden sticky bottom-0 left-0 right-0 z-20 bg-primary py-4 px-5 phone-nav-round">
         <div className="container flex items-center justify-between text-white">
           {/* home */}
           <NavLink
@@ -36,7 +40,7 @@ const PhoneNavbar = () => {
             onClick={() => setShowMenu(!showMenu)}
             className="flex flex-col gap-1 items-center capitalize w-fit">
             <RxDashboard className="text-lg" />
-            <span className="text-xs">menu</span>
+            <span className="text-xs">categories</span>
           </div>
           {/* call */}
           <div
@@ -48,9 +52,12 @@ const PhoneNavbar = () => {
           {/* cart */}
           <Link
             to="/cart"
-            className="flex flex-col gap-1 items-center capitalize w-fit">
+            className="flex relative flex-col gap-1 items-center capitalize w-fit">
             <SlHandbag className="text-lg" />
             <span className="text-xs">cart</span>
+            <span className="text-primary text-sm rounded-full h-5 w-5 text-center bg-white absolute -right-2 -top-2">
+              {selectedItem}
+            </span>
           </Link>
         </div>
       </section>
@@ -58,7 +65,10 @@ const PhoneNavbar = () => {
       {showMenu && (
         <div
           onClick={() => setShowMenu(!showMenu)}
-          className={cn("fixed transition-transform duration-1000 bg-gray-500/50 top-0 bottom-0 z-10", showMenu ? "left-0 right-0": "-left-[1000px]")}>
+          className={cn(
+            "fixed transition-transform duration-1000 bg-gray-500/50 top-0 bottom-0 z-10",
+            showMenu ? "left-0 right-0" : "-left-[1000px]"
+          )}>
           <div className="h-full w-fit">
             <Categories />
           </div>
