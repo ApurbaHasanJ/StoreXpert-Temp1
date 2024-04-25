@@ -12,13 +12,13 @@ const ServiceDesc = () => {
           <p className="border-b-2 text-base border-gray-300 pb-1">
             ডেলিভারি খরচঃ
           </p>
-          <ul className="text-secondary/80 py-4">
+          <ul className="text-secondary/80 py-2">
             <li className="flex gap-4 ">
-              <p>ঢাকা শহরের ভিতরে:</p>
+              <p>ঢাকা শহরের ভিতরেঃ</p>
               <span>৬০ টাকা</span>
             </li>
             <li className="flex mt-2 gap-4 ">
-              <p>ঢাকা শহরের বাইরে:</p>
+              <p>ঢাকা শহরের বাইরেঃ</p>
               <span>১৫০ টাকা</span>
             </li>
           </ul>
@@ -28,7 +28,7 @@ const ServiceDesc = () => {
         <PiKeyReturn className="md:text-3xl text-2xl md:-mt-1 text-primary" />{" "}
         <div>
           <p className="border-b-2 text-base border-gray-300 pb-1">রিটার্নঃ</p>
-          <p className="text-secondary/80 py-3">
+          <p className="text-secondary/80 py-2">
             ৭ দিনের মধ্যে ফ্রি রিটার্ন (
             <span className="text-primary px-1">যদি পণ্যে কোন সমস্যা থাকে</span>
             )
@@ -41,7 +41,7 @@ const ServiceDesc = () => {
           <p className="border-b-2 text-base border-gray-300 pb-1">
             পণ্য হাতে পেয়ে পেমেন্টঃ
           </p>
-          <p className="text-secondary/80 py-3">
+          <p className="text-secondary/80 py-2">
             ৪৮-৭২ ঘণ্টার মধ্যে সারা দেশে ক্যাশ অন ডেলিভারি
           </p>
         </div>
@@ -52,7 +52,7 @@ const ServiceDesc = () => {
           <p className="border-b-2 text-base border-gray-300 pb-1">
             কাস্টমার সার্ভিসঃ
           </p>
-          <p className="text-secondary/80 py-3">
+          <p className="text-secondary/80 py-2">
             সকাল ১০ টা থেকে রাত ১১ টা পর্যন্ত আমাদের কল অথবা হোয়াটসঅ্যাপ করতে
             পারেন
           </p>

@@ -3,9 +3,8 @@ import { AiOutlineMail } from "react-icons/ai";
 import { IoLocationOutline } from "react-icons/io5";
 import whatsAppImg from "/src/assets/icons/whatsapp.png";
 import { Link } from "react-router-dom";
-
 import facebookImg from "/src/assets/icons/facebook.png";
-import { Button, buttonVariants } from "../ui/button";
+import { buttonVariants } from "../ui/button";
 import { cn } from "@/lib/utils";
 
 const links = [
