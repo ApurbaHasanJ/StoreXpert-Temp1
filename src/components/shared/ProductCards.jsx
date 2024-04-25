@@ -15,7 +15,7 @@ const ProductCards = ({ products }) => {
   return (
     <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 md:gap-5 gap-3 gap-y-8">
       {products?.map((product) => (
-        <div key={product?._id}>
+        <div key={product?._id} className="flex flex-col justify-between">
           <Link to={`/products/${product?._id}`}>
             <div className="overflow-hidden bg-ghost rounded-xl relative">
               <img
@@ -32,36 +32,38 @@ const ProductCards = ({ products }) => {
               </span>
             </div>
 
-            <p className="text-sm line-clamp-1 hover:text-primary hover:underline font-semibold mt-2 mb-1 ">
+            <p className="text-sm line-clamp-2 hover:text-primary hover:underline font-semibold mt-2 mb-1 ">
               {product?.title}
             </p>
           </Link>
 
-          <div className="flex items-center gap-3 mb-3">
-            <p className="text-primary font-bold text-lg md:text-2xl">
-              <span className="text-base md:text-lg font-extrabold">৳</span>{" "}
-              {product?.disc
-                ? Math.floor(((100 - product?.disc) / 100) * product?.price)
-                : product?.price}
-            </p>
-            <s
-              className={cn(
-                " text-secondary block",
-                product?.disc ? "block" : "hidden"
-              )}>
-              ৳ {product?.price}
-            </s>
-          </div>
+          <div>
+            <div className="flex items-center gap-3 mb-3">
+              <p className="text-primary font-bold text-lg md:text-2xl">
+                <span className="text-base md:text-lg font-extrabold">৳</span>{" "}
+                {product?.disc
+                  ? Math.floor(((100 - product?.disc) / 100) * product?.price)
+                  : product?.price}
+              </p>
+              <s
+                className={cn(
+                  " text-secondary block",
+                  product?.disc ? "block" : "hidden"
+                )}>
+                ৳ {product?.price}
+              </s>
+            </div>
 
-          <Link
-            to="/checkout"
-            onClick={() => handleAddToCart(product)}
-            className={cn(
-              buttonVariants({ size: "lg" }),
-              "flex justify-center items-center gap-2 w-full"
-            )}>
-            <FaCartPlus /> <span>Order Now</span>
-          </Link>
+            <Link
+              to="/checkout"
+              onClick={() => handleAddToCart(product)}
+              className={cn(
+                buttonVariants({ size: "lg" }),
+                "flex justify-center items-center gap-2 w-full"
+              )}>
+              <FaCartPlus /> <span>Order Now</span>
+            </Link>
+          </div>
         </div>
       ))}
     </div>
