@@ -28,9 +28,10 @@ const categories = [
   },
 ];
 
-const Categories = () => {
+const Categories = ({ name }) => {
   return (
     <div className="bg-white lg:rounded-lg rounded-br-lg shadow-md p-2 max-md:pb-6 h-full pr-6 overflow-y-scroll max-md:text-sm">
+      {name && <h4 className="text-primary mb-8">WoWnex</h4>}
       {categories.map((category, index) => (
         <Link
           key={index}

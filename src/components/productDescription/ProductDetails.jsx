@@ -44,24 +44,24 @@ const ProductDetails = ({ product }) => {
         <div className="w-full h-fit">
           <div className="flex items-center justify-between gap-3 my-5">
             <div className="flex items-baseline gap-3">
-              <span className="text-primary font-bold md:text-3xl text-xl">
+              <p className="text-primary font-bold md:text-3xl text-xl">
                 <span className="md:text-xl text-base font-extrabold">৳</span>{" "}
                 {product?.disc
                   ? Math.floor(product.price * (1 - product.disc / 100))
                   : product?.price}
-              </span>
-              <span
+              </p>
+              <s
                 className={cn(
-                  "line-through text-secondary block",
+                  "text-secondary block",
                   product?.disc ? "block" : "hidden"
                 )}>
                 ৳ {product?.price}
-              </span>
+              </s>
             </div>
             {/* discounted amount */}
             <div
               className={cn(
-                "disc-box text-white bg-yellow-500 rounded-md font-bold text-sm px-3 flex gap-1 items-center",
+                "disc-box text-white bg-[#fcb800fc] rounded-md font-bold text-sm px-3 flex gap-1 items-center",
                 !product?.disc && "hidden"
               )}>
               <RxDotFilled className="text-xl" />{" "}

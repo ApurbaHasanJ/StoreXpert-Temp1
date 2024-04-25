@@ -34,7 +34,7 @@ const Footer = () => {
             <img src={facebookImg} className="w-12" alt="" />
             <div>
               <p className="font-medium">Visit Our Facebook</p>
-              <p>To get update about our latest update</p>
+              <p>To Get Latest Updates about Our Products and Discounts!</p>
             </div>
           </div>
           <Link

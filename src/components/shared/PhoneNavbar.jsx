@@ -26,7 +26,7 @@ const PhoneNavbar = () => {
 
   return (
     <>
-      <section className="md:hidden sticky bottom-0 left-0 right-0 z-20 bg-primary py-4 px-5 phone-nav-round">
+      <section className="md:hidden select-none sticky bottom-0 left-0 right-0 z-20 bg-primary py-4 px-5 phone-nav-round">
         <div className="container flex items-center justify-between text-white">
           {/* home */}
           <NavLink
@@ -70,7 +70,7 @@ const PhoneNavbar = () => {
             showMenu ? "left-0 right-0" : "-left-[1000px]"
           )}>
           <div className="h-full w-fit">
-            <Categories />
+            <Categories name="wownex"/>
           </div>
         </div>
       )}

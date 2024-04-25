@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import hero1 from "/src/assets/hero/hero1.jpg";
 import hero2 from "/src/assets/hero/hero2.jpg";
 import hero3 from "/src/assets/hero/hero3.jpg";
@@ -32,7 +33,17 @@ const Hero = () => {
       <div className="max-lg:hidden">
         <Categories />
       </div>
-      <Carousel className="w-full">
+      <Carousel
+        className="w-full"
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 5000,
+          }),
+        ]}>
         <CarouselContent>
           {heros.map((hero) => (
             <CarouselItem key={hero?._id}>
