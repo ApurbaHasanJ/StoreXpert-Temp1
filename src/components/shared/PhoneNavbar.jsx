@@ -1,53 +1,16 @@
-import NavItems from "./NavItems";
 import { HashLink as NavLink } from "react-router-hash-link";
 import { GoHome } from "react-icons/go";
-import { CiMenuBurger } from "react-icons/ci";
-
+import { RxDashboard } from "react-icons/rx";
 import { SlHandbag } from "react-icons/sl";
-
 import { BsTelephone } from "react-icons/bs";
 import { Link } from "react-router-dom";
-
-const navItems = [
-  {
-    item: "home",
-    url: "/",
-    icon: GoHome,
-  },
-  {
-    item: "menu",
-    url: "/#flash-sale",
-    icon: CiMenuBurger,
-  },
-  {
-    item: "call",
-    url: "/#hot-product",
-    icon: BsTelephone,
-  },
-  {
-    item: "cart",
-    url: "/cart",
-    icon: SlHandbag,
-  },
-];
-
-export const PhoneNavItems = () => {
-  return (
-    <>
-      {navItems.map((nav, index) => (
-        <NavLink
-          key={index}
-          to={nav?.url}
-          smooth
-          className="nav-item flex flex-col items-center capitalize">
-          <nav.icon className="text-lg" /> <span>{nav?.item}</span>
-        </NavLink>
-      ))}
-    </>
-  );
-};
+import { useState } from "react";
+import Categories from "../Categories";
+import { cn } from "@/lib/utils";
 
 const PhoneNavbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
   // direct call
   const handleCallClick = () => {
     const phoneNumber = "+8801884167824";
@@ -58,36 +21,50 @@ const PhoneNavbar = () => {
   };
 
   return (
-    <section className="md:hidden sticky bottom-0 left-0 right-0 bg-primary py-4">
-      <div className="container flex items-center justify-between text-white">
-        {/* home */}
-        <NavLink
-          to="/"
-          className="nav-item flex flex-col gap-1 items-center capitalize">
-          <GoHome className="text-lg" />
-          <span className="text-xs">home</span>
-        </NavLink>
-        {/* menu */}
-        <div className="nav-item flex flex-col gap-1 items-center capitalize">
-          <CiMenuBurger className="text-lg" />
-          <span className="text-xs">menu</span>
+    <>
+      <section className="md:hidden sticky bottom-0 left-0 right-0 z-20 bg-primary py-4 px-5">
+        <div className="container flex items-center justify-between text-white">
+          {/* home */}
+          <NavLink
+            to="/"
+            className="flex flex-col gap-1 items-center capitalize w-fit">
+            <GoHome className="text-lg" />
+            <span className="text-xs">home</span>
+          </NavLink>
+          {/* menu */}
+          <div
+            onClick={() => setShowMenu(!showMenu)}
+            className="flex flex-col gap-1 items-center capitalize w-fit">
+            <RxDashboard className="text-lg" />
+            <span className="text-xs">menu</span>
+          </div>
+          {/* call */}
+          <div
+            onClick={handleCallClick}
+            className="flex flex-col gap-1 items-center capitalize w-fit">
+            <BsTelephone className="text-lg" />
+            <span className="text-xs">call</span>
+          </div>
+          {/* cart */}
+          <Link
+            to="/cart"
+            className="flex flex-col gap-1 items-center capitalize w-fit">
+            <SlHandbag className="text-lg" />
+            <span className="text-xs">cart</span>
+          </Link>
         </div>
-        {/* call */}
+      </section>
+      {/* show menu */}
+      {showMenu && (
         <div
-          onClick={handleCallClick}
-          className="nav-item flex flex-col gap-1 items-center capitalize">
-          <BsTelephone className="text-lg" />
-          <span className="text-xs">call</span>
+          onClick={() => setShowMenu(!showMenu)}
+          className={cn("fixed transition-transform duration-1000 bg-gray-500/50 top-0 bottom-0 z-10", showMenu ? "left-0 right-0": "-left-[1000px]")}>
+          <div className="h-full w-fit">
+            <Categories />
+          </div>
         </div>
-        {/* cart */}
-        <Link
-          to="/cart"
-          className="nav-item flex flex-col gap-1 items-center capitalize">
-          <SlHandbag className="text-lg" />
-          <span className="text-xs">cart</span>
-        </Link>
-      </div>
-    </section>
+      )}
+    </>
   );
 };
 

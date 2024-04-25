@@ -18,6 +18,7 @@ import products from "../../public/products.json";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/features/cart";
+import { RxDotFilled } from "react-icons/rx";
 
 const ViewProduct = () => {
   const param = useParams();
@@ -49,16 +50,16 @@ const ViewProduct = () => {
   return (
     <section className="container mt-8 my-8">
       <div className="flex max-md:flex-col items-start gap-6 mb-16">
-        <div className="max-w-[440px] max-h-[440px] h-full w-full">
+        <div className="max-w-[440px] md:max-h-[440px] md:h-full h-fit w-full">
           <div className=" bg-ghost border relative rounded-xl overflow-hidden">
             <img
-              className="max-w-[440px] max-h-[440px] h-full w-full h-full aspect-square"
+              className="max-w-[440px] max-h-[440px] h-full w-full aspect-square"
               src={viewImg}
               alt={product?.title}
             />
             <span
               className={cn(
-                "bg-primary border border-ghost/80 text-ghost absolute top-0 left-0 rounded-br-xl rounded-tl-xl px-2 font-medium text-sm",
+                "bg-primary text-ghost absolute top-0 left-0 rounded-br-xl rounded-tl-xl px-2 font-medium text-sm",
                 product?.disc ? "block" : "hidden"
               )}>
               {product?.disc}&#37;
@@ -90,7 +91,7 @@ const ViewProduct = () => {
             <p className="md:text-3xl text-2xl capitalize">{product?.title}</p>
             <p
               className={cn(
-                "text-lg mt-2",
+                "text-lg mt-2 uppercase",
                 product?.inStock ? "text-green-500" : "text-red-500"
               )}>
               {product?.inStock ? "In Stock" : "Sold Out"}
@@ -98,27 +99,36 @@ const ViewProduct = () => {
           </div>
           <div className="flex max-lg:flex-col justify-between lg:gap-8 gap-14">
             <div className="w-full">
-              <div className="flex items-baseline gap-3 mb-4 mt-8">
-                <span className="text-primary font-bold md:text-3xl text-xl">
-                  <span className="text-3xl">৳</span>{" "}
-                  {product?.disc
-                    ? Math.floor(((100 - product?.disc) / 100) * product?.price)
-                    : product?.price}
-                </span>
-                <span
-                  className={cn(
-                    "line-through text-secondary block",
-                    product?.disc ? "block" : "hidden"
-                  )}>
-                  ৳ {product?.price}
-                </span>
+              <div className="flex items-center justify-between gap-3 my-5">
+                <div className="flex items-baseline gap-3">
+                  <span className="text-primary font-bold md:text-3xl text-xl">
+                    <span className="text-3xl">৳</span>{" "}
+                    {product?.disc
+                      ? Math.floor(product.price * (1 - product.disc / 100))
+                      : product?.price}
+                  </span>
+                  <span
+                    className={cn(
+                      "line-through text-secondary block",
+                      product?.disc ? "block" : "hidden"
+                    )}>
+                    ৳ {product?.price}
+                  </span>
+                </div>
+                <div className="disc-box text-white bg-yellow-500 rounded-md font-bold text-sm px-3 flex gap-1 items-center">
+                  <RxDotFilled className="text-xl"/> <small className="text-base font-extrabold bold">৳</small>
+                  {product?.disc &&
+                    product.price -
+                      Math.floor(product.price * (1 - product.disc / 100))}
+                  <span>OFF</span>
+                </div>
               </div>
               <Link
                 to="/checkout"
                 onClick={() => handleAddToCart(product)}
                 className={cn(
                   buttonVariants({ size: "lg" }),
-                  "w-full text-xl py-[10px] mt-7 rounded-full"
+                  "w-full text-xl mt-1 py-[10px] rounded-full"
                 )}>
                 Order Now
               </Link>

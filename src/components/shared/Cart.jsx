@@ -37,7 +37,9 @@ const Cart = ({ deliveryCharge }) => {
   const products = useSelector((state) => state?.cart?.products);
   const subTotal = useSelector((state) => state?.cart?.subTotal);
   const dispatch = useDispatch();
-  console.log(subTotal);
+  // console.log(subTotal);
+
+  window.scrollTo({ top: 0 });
 
   const handleIncreaseQuantity = (id) => {
     dispatch(increaseQuantity(id));
