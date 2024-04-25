@@ -180,23 +180,23 @@ const Cart = ({ deliveryCharge }) => {
               <span>Proceed To Checkout</span> <FaRightLong />
             </Link>
           </div>
-        </div>
 
-        <div className="text-center">
-          <div className="mt-5 px-7 py-3 border-2 border-secondary/40 border-dashed text-secondary/80 rounded-lg">
-            <p className="md:text-xl font-medium">
-              এই পণ্য সম্পর্কে জানতে আমাদের কল করুনঃ
-            </p>
-            <div className="flex items-center justify-center gap-2 text-3xl">
-              <IoCallOutline /> <span>01710-696950</span>
+          <div className="text-center">
+            <div className="mt-5 px-7 py-3 border-2 border-secondary/40 border-dashed text-secondary/80 rounded-lg">
+              <p className="md:text-xl font-medium">
+                এই পণ্য সম্পর্কে জানতে আমাদের কল করুনঃ
+              </p>
+              <div className="flex items-center justify-center gap-2 text-3xl">
+                <IoCallOutline /> <span>01710-696950</span>
+              </div>
             </div>
-          </div>
-          <div className="flex items-baseline justify-center ">
-            <Stars />
-            <p className="mt-3 px-2 text-secondary">
-              অর্ডার কনফার্ম এর ৪৮-৭২ ঘন্টার মধ্যে ক্যাশ অন ডেলিভারি
-            </p>
-            <Stars />
+            <div className="flex items-baseline justify-center ">
+              <Stars />
+              <p className="mt-3 px-2 text-secondary">
+                অর্ডার কনফার্ম এর ৪৮-৭২ ঘন্টার মধ্যে ক্যাশ অন ডেলিভারি
+              </p>
+              <Stars />
+            </div>
           </div>
         </div>
       </div>
