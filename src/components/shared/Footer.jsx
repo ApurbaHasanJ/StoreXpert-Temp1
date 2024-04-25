@@ -3,9 +3,9 @@ import { AiOutlineMail } from "react-icons/ai";
 import { IoLocationOutline } from "react-icons/io5";
 import whatsAppImg from "/src/assets/icons/whatsapp.png";
 import { Link } from "react-router-dom";
-
 import facebookImg from "/src/assets/icons/facebook.png";
-import { Button } from "../ui/button";
+import { buttonVariants } from "../ui/button";
+import { cn } from "@/lib/utils";
 
 const links = [
   { title: "Terms & Conditions", url: "/terms-and-conditions" },
@@ -37,7 +37,11 @@ const Footer = () => {
               <p>To get update about our latest update</p>
             </div>
           </div>
-          <Button variant="outline">Visit Now</Button>
+          <Link
+            to="https://apurbahasanj.netlify.app"
+            className={cn(buttonVariants({ variant: "outline" }))}>
+            Visit Now
+          </Link>
         </div>
       </div>
 
@@ -53,7 +57,7 @@ const Footer = () => {
               tenetur ex nostrum neque.
             </p>
             <a
-              href="https://wa.me/+8801886084422?text=Hello! I Need Fashion Advice and Assistance."
+              href="https://wa.me/+8801886084422?text=Hello! I Need Assistance."
               target="_blank"
               rel="noopener noreferrer">
               <img className="h-16 mt-3" src={whatsAppImg} alt="" />
@@ -105,7 +109,7 @@ const Footer = () => {
             <p className="max-sm:mt-4">
               Developed by{" "}
               <Link
-                target="blank"
+                target="_blank"
                 to="https://apurbahasanj.netlify.app"
                 className="hover:text-primary/80 hover:underline font-semibold">
                 VRTX-Forge

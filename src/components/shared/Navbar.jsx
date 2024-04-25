@@ -22,7 +22,7 @@ const Navbar = () => {
       // Get the current scroll position
       const scrollY = window.scrollY || window.pageYOffset;
 
-      if (scrollY > 200) {
+      if (scrollY > 400) {
         setScroll(true);
       } else {
         setScroll(false);
@@ -41,8 +41,7 @@ const Navbar = () => {
     <header className="relative">
       <div
         className={cn(
-          "left-0 right-0 top-0 bg-white z-10 shadow-sm duration-500 transition-all ease-in-out",
-          scroll ? "fixed" : "sticky"
+          "md:fixed left-0 right-0 top-0 bg-white z-20 shadow-sm duration-500 transition-all ease-in-out"
         )}>
         <div className="container flex items-center justify-between gap-10 py-5">
           <h4 className="text-primary">WoWnex</h4>
@@ -57,13 +56,17 @@ const Navbar = () => {
             </span>
           </Link>
         </div>
-        <div className="md:hidden container z-10 pb-3">
-          <Search />
+        <div
+          className={cn(
+            "md:hidden relative bg-white container z-10 pb-3 transition-all ease-in-out",
+            scroll && "fixed duration-500 py-3 left-0 right-0 top-0"
+          )}>
+          <Search scroll={scroll} />
         </div>
       </div>
 
       {/* 2nd column */}
-      <div className="bg-primary text-white py-3 max-md:hidden">
+      <div className="bg-primary text-white py-3 mt-[84px] max-md:hidden">
         <div className="container w-full flex items-center gap-5 justify-between">
           <div
             onClick={() => setShowCategories(!showCategories)}
@@ -73,8 +76,8 @@ const Navbar = () => {
           </div>
           <div
             className={cn(
-              "lg:hidden fixed duration-500 z-10 md:top-[185px] top-[178px]",
-              showCategories ? "left-0" : "-left-[400px]"
+              "lg:hidden absolute duration-500 z-10 top-[52px]",
+              showCategories ? "left-0" : "-left-[1000px]"
             )}>
             <Categories />
           </div>

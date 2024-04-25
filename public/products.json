@@ -4,6 +4,7 @@
     "title": "Ladies Hand Bag - Original leather",
     "price": 290,
     "disc": 20,
+    "discountedPrice": 232,
     "images": [
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761359/Products/bags/bag8_mi0ni8.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761355/Products/bags/bag7_gr4tl1.jpg",
@@ -55,6 +56,7 @@
     "title": "premium sunglass original frame",
     "price": 590,
     "disc": 35,
+    "discountedPrice": 383.5,
     "images": [
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg"
@@ -71,6 +73,7 @@
     "title": "Men original fabric t-shirt",
     "price": 690,
     "disc": 20,
+    "discountedPrice": 552,
     "images": [
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760410/Products/t-shirts/t-shirt6_a9idry.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760408/Products/t-shirts/t-shirt5_jnguyh.jpg"
@@ -87,6 +90,7 @@
     "title": "Men best Quality Shoe",
     "price": 790,
     "disc": 10,
+    "discountedPrice": 711,
     "images": [
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760374/Products/shoes/shoe9_gxdwzh.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760378/Products/shoes/shoe11_xzrkuh.jpg"
@@ -119,6 +123,7 @@
     "title": "Men best Quality Shoe",
     "price": 990,
     "disc": 10,
+    "discountedPrice": 891,
     "images": [
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760358/Products/shoes/shoe2_sndcco.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760373/Products/shoes/shoe8_jedjmw.jpg",
@@ -142,6 +147,7 @@
     "title": "Men original fabric t-shirt",
     "price": 1090,
     "disc": 40,
+    "discountedPrice": 654,
     "images": [
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760408/Products/t-shirts/t-shirt5_jnguyh.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760407/Products/t-shirts/t-shirt3_gokebj.jpg"
@@ -158,6 +164,7 @@
     "title": "Men Premium watch",
     "price": 1190,
     "disc": 20,
+    "discountedPrice": 952,
     "images": [
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760455/Products/watches/watch10_ttbdtz.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760454/Products/watches/watch9_fnwsot.jpg"
@@ -174,6 +181,7 @@
     "title": "Ladies Hand Bag - Original leather",
     "price": 390,
     "disc": 10,
+    "discountedPrice": 351,
     "images": [
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760250/Products/bags/bag2_ywfk5a.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761352/Products/bags/bag6_ud0hd2.jpg",
@@ -192,6 +200,7 @@
     "title": "Girls School Bag - Original leather",
     "price": 390,
     "disc": 10,
+    "discountedPrice": 351,
     "images": [
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760251/Products/bags/bag1_f3scm2.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760250/Products/bags/bag2_ywfk5a.jpg",
@@ -211,6 +220,7 @@
     "title": "Girls School Bag - Original leather",
     "price": 390,
     "disc": 10,
+    "discountedPrice": 351,
     "images": [
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761350/Products/bags/bag5_lakgk5.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760250/Products/bags/bag2_ywfk5a.jpg",
@@ -230,6 +240,7 @@
     "title": "premium sunglass original frame",
     "price": 590,
     "disc": 35,
+    "discountedPrice": 383.5,
     "images": [
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761728/Products/glasses/sunglass7_vp3rkn.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761622/Products/glasses/sunglass6_misy7o.jpg",
@@ -247,6 +258,7 @@
     "title": "premium sunglass original frame",
     "price": 590,
     "disc": 35,
+    "discountedPrice": 383.5,
     "images": [
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761617/Products/glasses/sunglass5_x64nbj.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761728/Products/glasses/sunglass7_vp3rkn.jpg",
@@ -283,6 +295,7 @@
     "title": "premium sunglass original frame",
     "price": 590,
     "disc": 35,
+    "discountedPrice": 383.5,
     "images": [
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760315/Products/glasses/sunglass1_e9vubi.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761613/Products/glasses/sunglass4_eaka1o.jpg",
@@ -302,6 +315,7 @@
     "title": "premium sunglass original frame",
     "price": 590,
     "disc": 35,
+    "discountedPrice": 383.5,
     "images": [
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761608/Products/glasses/sunglass3_mdfvv3.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760315/Products/glasses/sunglass1_e9vubi.jpg",
@@ -322,6 +336,7 @@
     "title": "premium sunglass original frame",
     "price": 590,
     "disc": 35,
+    "discountedPrice": 383.5,
     "images": [
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760316/Products/glasses/sunglass2_ql43kb.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761613/Products/glasses/sunglass4_eaka1o.jpg",
@@ -343,6 +358,7 @@
     "title": "premium sunglass original frame",
     "price": 590,
     "disc": 35,
+    "discountedPrice": 383.5,
     "images": [
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712761732/Products/glasses/sunglass8_i2lrzc.jpg",
       "https://res.cloudinary.com/dxixdugif/image/upload/v1712760316/Products/glasses/sunglass2_ql43kb.jpg",
